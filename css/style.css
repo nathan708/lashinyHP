@@ -50,13 +50,6 @@ a {
   opacity: 0.7;
 }
 
-.top-big-img {
-  background-image: url(/images/Lashiny.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-}
-
 /* --- 全体のBOX定義 ---------------------------------------- */
 .box-top-bg-img {
   position: relative;
@@ -78,14 +71,14 @@ a {
   animation: bgAnime 30s infinite; /* 3画像 × 各10s = 30s */
 }
 .box-top-bg-img .src1 {
-  background-image: url(/images/Lashiny.jpg); /* 背景の画像を指定 */
+  background-image: url(../images/Lashiny.jpg); /* 背景の画像を指定 */
 }
 .box-top-bg-img .src2 {
-  background-image: url(/images/toptest2.jpeg); /* 背景の画像を指定 */
+  background-image: url(../images/toptest2.jpeg); /* 背景の画像を指定 */
   animation-delay: 10s;
 }
 .box-top-bg-img .src3 {
-  background-image: url(/images/toptest3.jpeg); /* 背景の画像を指定 */
+  background-image: url(../images/toptest3.jpeg); /* 背景の画像を指定 */
   animation-delay: 20s;
 }
 @keyframes bgAnime {

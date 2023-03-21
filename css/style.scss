@@ -80,14 +80,13 @@ a {
   }
 }
 
-
-
-.top-big-img {
-  background-image: url(/images/Lashiny.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-}
+// 動きなし
+// .top-big-img {
+//   background-image: url(images/Lashiny.jpg);
+//   background-size: cover;
+//   background-position: center;
+//   height: 100vh;
+// }
 
 // テスト
 
@@ -114,15 +113,16 @@ a {
 
   /* --- 段差で背景画像のアニメーションを実行 ----------------- */
   .src1 {
-    background-image : url(/images/Lashiny.jpg);   /* 背景の画像を指定 */
+    background-image : url(../images/Lashiny.jpg);   /* 背景の画像を指定 */
   }
   .src2 {
-    background-image : url(/images/toptest2.jpeg);   /* 背景の画像を指定 */
+    background-image : url(../images/toptest2.jpeg);   /* 背景の画像を指定 */
     animation-delay  : 10s;
   }
   .src3 {
-    background-image : url(/images/toptest3.jpeg);   /* 背景の画像を指定 */
+    background-image : url(../images/toptest3.jpeg);   /* 背景の画像を指定 */
     animation-delay  : 20s;
+
   }
 
   @keyframes bgAnime {
