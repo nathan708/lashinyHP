@@ -50,69 +50,15 @@ a {
   opacity: 0.7;
 }
 
-/* --- 全体のBOX定義 ---------------------------------------- */
-.box-top-bg-img {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  margin: auto;
-  overflow: hidden;
-  /* --- 背景の指定 ------------------------------------------- */
-  /* --- 段差で背景画像のアニメーションを実行 ----------------- */
-}
-.box-top-bg-img .bgImg {
+.top-big-img {
+  background-image: url(../images/Lashiny.jpg);
   background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  opacity: 0;
-  animation: bgAnime 30s infinite; /* 3画像 × 各10s = 30s */
-}
-.box-top-bg-img .src1 {
-  background-image: url(../images/Lashiny.jpg); /* 背景の画像を指定 */
-}
-.box-top-bg-img .src2 {
-  background-image: url(../images/toptest2.jpeg); /* 背景の画像を指定 */
-  animation-delay: 10s;
-}
-.box-top-bg-img .src3 {
-  background-image: url(../images/toptest3.jpeg); /* 背景の画像を指定 */
-  animation-delay: 20s;
-}
-@keyframes bgAnime {
-  0% {
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 1;
-  }
-  30% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
+  background-position: center;
+  height: 100vh;
 }
 
 #header {
-  position: absolute;
   height: 130px;
-  left: 0;
-  right: 0;
-  margin: auto;
-  /*JSを使いfixedクラスが付与された際の設定*/
-}
-#header.fixed {
-  position: fixed; /*fixedを設定して固定*/
-  z-index: 999; /*最前面へ*/
-  top: 0; /*位置指定*/
-  left: 0; /*位置指定*/
-  background-color: #fdefe9;
 }
 #header .header-inner {
   height: 100%;
