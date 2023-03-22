@@ -80,15 +80,6 @@ a {
   }
 }
 
-// 動きなし
-// .top-big-img {
-//   background-image: url(images/Lashiny.jpg);
-//   background-size: cover;
-//   background-position: center;
-//   height: 100vh;
-// }
-
-// テスト
 
 
 /* --- 全体のBOX定義 ---------------------------------------- */
@@ -547,6 +538,77 @@ a {
 }
 
 footer {
+
+/*リンクの形状*/
+#page-top a{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	background:#942D2F;
+	border-radius: 5px;
+	width: 60px;
+	height: 60px;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase; 
+	text-decoration: none;
+	font-size:0.6rem;
+	transition:all 0.3s;
+
+  & a:hover{
+    background: #777;
+  }
+}
+
+
+/*リンクを右下に固定*/
+#page-top {
+	position: fixed;
+	right: 10px;
+	bottom:10px;
+	z-index: 2;
+    /*はじめは非表示*/
+	opacity: 0;
+	transform: translateX(100px);
+  
+
+  /*　左の動き　*/
+  &.LeftMove{
+    animation: LeftAnime 0.5s forwards;
+  }
+  
+  @keyframes LeftAnime{
+    from {
+      opacity: 0;
+    transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+    transform: translateX(0);
+    }
+  }
+  
+  /*　右の動き　*/
+  &.RightMove{
+    animation: RightAnime 0.5s forwards;
+  }
+  @keyframes RightAnime{
+    from {
+      opacity: 1;
+    transform: translateX(0);
+    }
+    to {
+      opacity: 1;
+    transform: translateX(100px);
+    }
+  }
+}
+
+
+
+
+
+
   .footer-nav {
     ul {
 
