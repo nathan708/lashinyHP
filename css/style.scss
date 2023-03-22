@@ -134,13 +134,13 @@ a {
   margin: auto;
 
   /*JSを使いfixedクラスが付与された際の設定*/
-  &.fixed{
-    position: fixed;/*fixedを設定して固定*/
-    z-index: 999;/*最前面へ*/
-    top:0;/*位置指定*/
-    left:0;/*位置指定*/
-    background-color:#fdefe9;
-  }
+  // &.fixed{
+  //   position: fixed;/*fixedを設定して固定*/
+  //   z-index: 999;/*最前面へ*/
+  //   top:0;/*位置指定*/
+  //   left:0;/*位置指定*/
+  //   background-color:#fdefe9;
+  // }
 
 
 
@@ -159,7 +159,7 @@ a {
       // background-color: #fff;
     }
 
-    #main-nav {
+    #g-nav {
       ul {
         display: flex;
         @include ta {
@@ -539,70 +539,69 @@ a {
 
 footer {
 
-/*リンクの形状*/
-#page-top a{
-	display: flex;
-	justify-content:center;
-	align-items:center;
-	background:#942D2F;
-	border-radius: 5px;
-	width: 60px;
-	height: 60px;
-	color: #fff;
-	text-align: center;
-	text-transform: uppercase; 
-	text-decoration: none;
-	font-size:0.6rem;
-	transition:all 0.3s;
+  /*リンクの形状*/
+  #page-top a{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background:#942D2F;
+    border-radius: 5px;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase; 
+    text-decoration: none;
+    font-size:0.6rem;
+    transition:all 0.3s;
 
-  & a:hover{
-    background: #777;
+    & a:hover{
+      background: #777;
+    }
   }
-}
 
-
-/*リンクを右下に固定*/
-#page-top {
-	position: fixed;
-	right: 10px;
-	bottom:10px;
-	z-index: 2;
-    /*はじめは非表示*/
-	opacity: 0;
-	transform: translateX(100px);
-  
-
-  /*　左の動き　*/
-  &.LeftMove{
-    animation: LeftAnime 0.5s forwards;
-  }
-  
-  @keyframes LeftAnime{
-    from {
-      opacity: 0;
+  /*リンクを右下に固定*/
+  #page-top {
+    position: fixed;
+    right: 10px;
+    bottom:10px;
+    z-index: 2;
+      /*はじめは非表示*/
+    opacity: 0;
     transform: translateX(100px);
+    
+
+    /*　左の動き　*/
+    &.LeftMove{
+      animation: LeftAnime 0.5s forwards;
     }
-    to {
-      opacity: 1;
-    transform: translateX(0);
+    
+    @keyframes LeftAnime{
+      from {
+        opacity: 0;
+      transform: translateX(100px);
+      }
+      to {
+        opacity: 1;
+      transform: translateX(0);
+      }
+    }
+
+    /*　右の動き　*/
+    &.RightMove{
+      animation: RightAnime 0.5s forwards;
+    }
+    @keyframes RightAnime{
+      from {
+        opacity: 1;
+      transform: translateX(0);
+      }
+      to {
+        opacity: 1;
+      transform: translateX(100px);
+      }
     }
   }
-  
-  /*　右の動き　*/
-  &.RightMove{
-    animation: RightAnime 0.5s forwards;
-  }
-  @keyframes RightAnime{
-    from {
-      opacity: 1;
-    transform: translateX(0);
-    }
-    to {
-      opacity: 1;
-    transform: translateX(100px);
-    }
-  }
-}
 
 
 
@@ -642,12 +641,6 @@ footer {
             }
           }
         }
-      }
-  
-  
-  
+    }
   }
-
-
-
 }

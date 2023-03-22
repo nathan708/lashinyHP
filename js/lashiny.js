@@ -1,23 +1,28 @@
+
+// トップを固定するための動きstart
+
 //スクロールすると上部に固定させるための設定を関数でまとめる
-function FixedAnime() {
-	var headerH = $('#header').outerHeight(true);
-	var scroll = $(window).scrollTop();
-	if (scroll >= headerH){//headerの高さ以上になったら
-			$('#header').addClass('fixed');//fixedというクラス名を付与
-		}else{//それ以外は
-			$('#header').removeClass('fixed');//fixedというクラス名を除去
-		}
-}
+// function FixedAnime() {
+// 	var headerH = $('#header').outerHeight(true);
+// 	var scroll = $(window).scrollTop();
+// 	if (scroll >= headerH){//headerの高さ以上になったら
+// 			$('#header').addClass('fixed');//fixedというクラス名を付与
+// 		}else{//それ以外は
+// 			$('#header').removeClass('fixed');//fixedというクラス名を除去
+// 		}
+// }
 
-// 画面をスクロールをしたら動かしたい場合の記述
-$(window).scroll(function () {
-	FixedAnime();/* スクロール途中からヘッダーを出現させる関数を呼ぶ*/
-});
+// // 画面をスクロールをしたら動かしたい場合の記述
+// $(window).scroll(function () {
+// 	FixedAnime();/* スクロール途中からヘッダーを出現させる関数を呼ぶ*/
+// });
 
-// ページが読み込まれたらすぐに動かしたい場合の記述
-$(window).on('load', function () {
-	FixedAnime();/* スクロール途中からヘッダーを出現させる関数を呼ぶ*/
-});
+// // ページが読み込まれたらすぐに動かしたい場合の記述
+// $(window).on('load', function () {
+// 	FixedAnime();/* スクロール途中からヘッダーを出現させる関数を呼ぶ*/
+// });
+
+// トップを固定するための動きend
 
 
 // ナビメニューからリンク先までスクロールさせる
@@ -67,3 +72,7 @@ $('#page-top').click(function () {
 	}, 500);//ページトップスクロールの速さ。数字が大きいほど遅くなる
 	return false;//リンク自体の無効化
 });
+
+
+
+// メニューをハンバーガー
