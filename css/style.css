@@ -59,6 +59,16 @@ a {
   overflow: hidden;
   /* --- 背景の指定 ------------------------------------------- */
   /* --- 段差で背景画像のアニメーションを実行 ----------------- */
+  /*========= 途中からハンバーガーメニューに変化するのためのCSS ===============*/
+  /*========= ボタンのためのCSS ===============*/
+  /*ボタン全体の形状*/
+  /*fadeDownクラスが付与された後のボタンの出現アニメーション設定*/
+  /*========= ヘッダーナビゲーションのためのCSS ===============*/
+  /*==ヘッダーの形状*/
+  /*==ヘッダーのテキストナビゲーションの形状*/
+  /*.doneクラスがついたヘッダーのテキストナビゲーションの形状*/
+  /*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたナビゲーションの形状*/
+  /*リストの形状*/
 }
 .box-top-bg-img .bgImg {
   background-size: cover;
@@ -98,8 +108,7 @@ a {
     opacity: 0;
   }
 }
-
-#header {
+.box-top-bg-img #header {
   position: absolute;
   height: 130px;
   left: 0;
@@ -107,39 +116,181 @@ a {
   margin: auto;
   /*JSを使いfixedクラスが付与された際の設定*/
 }
-#header .header-inner {
+.box-top-bg-img #header .header-inner {
   height: 100%;
   align-items: center;
   display: flex;
   justify-content: space-between;
 }
 @media (max-width: 768px) {
-  #header .header-inner {
+  .box-top-bg-img #header .header-inner {
     flex-direction: column;
   }
 }
-#header .header-inner .logo {
+.box-top-bg-img #header .header-inner .logo {
   width: 300px;
 }
-#header .header-inner #g-nav ul {
+.box-top-bg-img #header .header-inner #g-nav ul {
   display: flex;
 }
 @media (max-width: 768px) {
-  #header .header-inner #g-nav ul {
+  .box-top-bg-img #header .header-inner #g-nav ul {
     flex-direction: column;
   }
 }
-#header .header-inner #g-nav ul li {
+.box-top-bg-img #header .header-inner #g-nav ul li {
   margin-right: 20px;
   font-size: 1.2rem;
 }
 @media (max-width: 768px) {
-  #header .header-inner #g-nav ul li {
+  .box-top-bg-img #header .header-inner #g-nav ul li {
     margin: 10px 0;
   }
 }
-#header .header-inner #g-nav ul li:nth-child(7) {
+.box-top-bg-img #header .header-inner #g-nav ul li:nth-child(7) {
   margin-right: 0;
+}
+.box-top-bg-img .openbtn {
+  /*はじめは非表示に*/
+  display: none;
+  /*ボタンの位置*/
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+  /*ボタンの形状*/
+  background: #666;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  /*ボタンのアイコン設定*/
+  /*activeクラスが付与された後のボタンのアイコン設定*/
+}
+.box-top-bg-img .openbtn span {
+  display: inline-block;
+  transition: all 0.4s;
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #fff;
+  width: 45%;
+}
+.box-top-bg-img .openbtn span:nth-of-type(1) {
+  top: 15px;
+}
+.box-top-bg-img .openbtn span:nth-of-type(2) {
+  top: 23px;
+}
+.box-top-bg-img .openbtn span:nth-of-type(3) {
+  top: 31px;
+}
+.box-top-bg-img .openbtn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+.box-top-bg-img .openbtn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+.box-top-bg-img .openbtn.active span:nth-of-type(3) {
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+.box-top-bg-img .fadeDown {
+  animation-name: fadeDownAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  display: block;
+}
+@keyframes fadeDownAnime {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.box-top-bg-img #header {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  /*.doneクラスがついたヘッダー*/
+  /*メニューボタンをクリックした際に付与されるpanelactiveクラスがついたら*/
+}
+.box-top-bg-img #header.dnone {
+  opacity: 0; /*透過0にして非表示に*/
+}
+.box-top-bg-img #header.dnone.panelactive {
+  opacity: 1; /*不透明にして出現*/
+}
+.box-top-bg-img #g-navi ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.box-top-bg-img #g-navi ul li a {
+  display: block;
+  text-decoration: none;
+  color: #666;
+  padding: 10px;
+}
+.box-top-bg-img #g-navi ul li.current a,
+.box-top-bg-img #g-navi ul li a:hover {
+  color: #fff;
+}
+.box-top-bg-img #header.dnone #g-navi {
+  /*固定位置にして最背面に*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /*高さと幅*/
+  width: 100%;
+  height: 100vh;
+  /*天地中央＆テキスト中央揃え*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /*はじめは透過0に*/
+  opacity: 0;
+  transition: all 0.4s;
+}
+.box-top-bg-img #header.dnone.panelactive #g-navi {
+  opacity: 1; /*不透明に*/
+  z-index: 3; /*最前面に*/
+  background: #eee;
+}
+.box-top-bg-img #header.dnone.panelactive #g-navi ul {
+  display: block; /*flexの横並びをblockにして縦並びに*/
+}
+.box-top-bg-img #header.dnone.panelactive #g-navi li a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+.box-top-bg-img section {
+  position: relative;
+  z-index: 1;
 }
 
 #concept {
