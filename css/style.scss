@@ -133,7 +133,8 @@ a {
   right: 0;
   margin: auto;
 
-  /*JSを使いfixedクラスが付与された際の設定*/
+  // ナビメニュー固定用
+  // /*JSを使いfixedクラスが付与された際の設定*/
   &.fixed{
     position: fixed;/*fixedを設定して固定*/
     z-index: 999;/*最前面へ*/
@@ -159,7 +160,125 @@ a {
       // background-color: #fff;
     }
 
-    #main-nav {
+    @include ta {
+    
+    /*========= ボタンのためのCSS ===============*/
+    .openbtn{
+      position:fixed;
+        z-index: 9999;/*ボタンを最前面に*/
+      top:10px;
+      left: 10px;
+      cursor: pointer;
+        width: 50px;
+        height:50px;
+        
+        /*×に変化*/	
+        span{
+          display: inline-block;
+          transition: all .4s;
+          position: absolute;
+          left: 14px;
+          height: 3px;
+          border-radius: 2px;
+          background-color: #666;
+          width: 45%;
+          
+          &:nth-of-type(1) {
+            top:15px;	
+          }
+          &:nth-of-type(2) {
+            top:23px;
+          }
+          &:nth-of-type(3) {
+            top:31px;
+          }
+        }
+        
+        
+        
+        &.active span:nth-of-type(1) {
+          top: 18px;
+          left: 18px;
+          transform: translateY(6px) rotate(-45deg);
+          width: 30%;
+        }
+        
+        &.active span:nth-of-type(2) {
+          opacity: 0;
+        }
+        
+        &.active span:nth-of-type(3){
+          top: 30px;
+          left: 18px;
+          transform: translateY(-6px) rotate(45deg);
+          width: 30%;
+        }
+      }
+    }
+
+    @include ta {
+
+      #g-nav {
+  
+      /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+      position:fixed;
+      z-index: 999;
+      /*ナビのスタート位置と形状*/
+      top:0;
+      left: -120%;
+      width:100%;
+      height: 100vh;/*ナビの高さ*/
+      background:#999;
+        /*動き*/
+      transition: all 0.6s;
+  
+    
+      /*アクティブクラスがついたら位置を0に*/
+      &.panelactive{
+        left: 0;
+      }
+        
+      /*ナビゲーションの縦スクロール*/
+      &.panelactive #g-nav-list{
+        /*ナビの数が増えた場合縦スクロール*/
+        position: fixed;
+        z-index: 999; 
+        width:100%;
+        height: 100vh;/*表示する高さ*/
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+    
+    /*ナビゲーション*/
+      ul {
+        /*ナビゲーション天地中央揃え*/
+        position: absolute;
+        z-index: 999;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+      }
+    
+    /*リストのレイアウト設定*/
+    
+      li{
+      list-style: none;
+        text-align: center; 
+        
+        a{
+          color: #333;
+          text-decoration: none;
+          padding:10px;
+          display: block;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          font-weight: bold;
+        }
+      }    
+    }
+  }
+      
+
       ul {
         display: flex;
         @include ta {
@@ -182,8 +301,8 @@ a {
         }
       }
     }
+
   }
-}
 
 
 #concept {
