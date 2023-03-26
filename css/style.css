@@ -50,55 +50,6 @@ a {
   opacity: 0.7;
 }
 
-/* --- 全体のBOX定義 ---------------------------------------- */
-.box-top-bg-img {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  margin: auto;
-  overflow: hidden;
-  /* --- 背景の指定 ------------------------------------------- */
-  /* --- 段差で背景画像のアニメーションを実行 ----------------- */
-}
-.box-top-bg-img .bgImg {
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  opacity: 0;
-  animation: bgAnime 30s infinite; /* 3画像 × 各10s = 30s */
-}
-.box-top-bg-img .src1 {
-  background-image: url(../images/Lashiny.jpg); /* 背景の画像を指定 */
-}
-.box-top-bg-img .src2 {
-  background-image: url(../images/toptest2.jpeg); /* 背景の画像を指定 */
-  animation-delay: 10s;
-}
-.box-top-bg-img .src3 {
-  background-image: url(../images/toptest3.jpeg); /* 背景の画像を指定 */
-  animation-delay: 20s;
-}
-@keyframes bgAnime {
-  0% {
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 1;
-  }
-  30% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 #header {
   position: absolute;
   height: 130px;
@@ -247,6 +198,55 @@ a {
 }
 #header .header-inner ul li:nth-child(7) {
   margin-right: 0;
+}
+
+/* --- 全体のBOX定義 ---------------------------------------- */
+.box-top-bg-img {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  overflow: hidden;
+  /* --- 背景の指定 ------------------------------------------- */
+  /* --- 段差で背景画像のアニメーションを実行 ----------------- */
+}
+.box-top-bg-img .bgImg {
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  animation: bgAnime 30s infinite; /* 3画像 × 各10s = 30s */
+}
+.box-top-bg-img .src1 {
+  background-image: url(../images/Lashiny.jpg); /* 背景の画像を指定 */
+}
+.box-top-bg-img .src2 {
+  background-image: url(../images/toptest2.jpeg); /* 背景の画像を指定 */
+  animation-delay: 10s;
+}
+.box-top-bg-img .src3 {
+  background-image: url(../images/toptest3.jpeg); /* 背景の画像を指定 */
+  animation-delay: 20s;
+}
+@keyframes bgAnime {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 #concept {
@@ -649,6 +649,18 @@ a {
   line-height: 3rem;
   display: table-cell;
   vertical-align: middle;
+}
+
+#archivement-profile {
+  margin-top: 50px;
+}
+#archivement-profile-info {
+  margin-top: 50px;
+  text-align: center;
+}
+#archivement-profile-info p {
+  margin-top: 30px;
+  line-height: 1.5;
 }
 
 footer {
