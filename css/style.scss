@@ -286,14 +286,14 @@ a {
 
   /* --- 段差で背景画像のアニメーションを実行 ----------------- */
   .src1 {
-    background-image : url(../images/top/Lashiny.jpg);   /* 背景の画像を指定 */
+    background-image : url(../images/index/Lashiny.jpg);   /* 背景の画像を指定 */
   }
   .src2 {
-    background-image : url(../images/top/toptest2.jpeg);   /* 背景の画像を指定 */
+    background-image : url(../images/index/toptest2.jpeg);   /* 背景の画像を指定 */
     animation-delay  : 10s;
   }
   .src3 {
-    background-image : url(../images/top/toptest3.jpeg);   /* 背景の画像を指定 */
+    background-image : url(../images/index/toptest3.jpeg);   /* 背景の画像を指定 */
     animation-delay  : 20s;
 
   }
@@ -815,6 +815,31 @@ a {
 
 // プロフィールページ
 
+/* --- 全体のBOX定義 ---------------------------------------- */
+.box-top-bg-img {
+  position   : relative;
+  width  : 100%;
+  height     : 100vh;
+  margin     : auto;
+  overflow   : hidden;
+
+  /* --- 背景の指定 ------------------------------------------- */
+  .bgImgNoAnime {
+    background-size: cover;
+    position   : absolute;
+    top        : 0;
+    left       : 0;
+    bottom     : 0;
+    right      : 0;
+  }
+
+  .profile-top {
+    background-image: url(../images/profile/profile-top.jpg);
+  }
+}
+
+
+
 #archivement-profile {
   margin-top: 50px;
 
@@ -865,7 +890,7 @@ a {
     }
 
 
-    .profile-img {
+    .certification-img {
       width: 48%;
 
       @include ta {
@@ -873,9 +898,7 @@ a {
       }
 
       img {
-        border-radius: 100%;
-        box-shadow: 20px 36px 25px 0 rgba(230, 196, 179, 0.77);
-
+        margin-top: 30px;
         @include ta {
           width: 100%;
           margin-top: 30px;
