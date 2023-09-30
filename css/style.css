@@ -1044,7 +1044,7 @@ a {
   right: -25%;
 }
 #p-color-flow .flow-box:nth-child(2)::after {
-  content: url(/images/flow_connect.png);
+  content: url(../images/flow_connect.png);
   position: absolute;
   bottom: -35%;
   left: 10%;
@@ -1052,7 +1052,7 @@ a {
   transform: scale(0.8);
 }
 #p-color-flow .flow-box:nth-child(3)::after {
-  content: url(/images/flow_connect.png);
+  content: url(../images/flow_connect.png);
   position: absolute;
   bottom: -30%;
   left: 40%;
@@ -1060,7 +1060,7 @@ a {
   transform: scale(0.8);
 }
 #p-color-flow .flow-box:nth-child(4)::after {
-  content: url(/images/flow_connect.png);
+  content: url(../images/flow_connect.png);
   position: absolute;
   bottom: -30%;
   left: 40%;
@@ -1068,7 +1068,7 @@ a {
   transform: scale(0.8);
 }
 #p-color-flow .flow-box:nth-child(5)::after {
-  content: url(/images/flow_connect.png);
+  content: url(../images/flow_connect.png);
   position: absolute;
   bottom: -35%;
   left: 0%;
@@ -1076,7 +1076,7 @@ a {
   transform: scale(0.8);
 }
 #p-color-flow .flow-box:nth-child(6)::after {
-  content: url(/images/flow_connect.png);
+  content: url(../images/flow_connect.png);
   position: absolute;
   bottom: -30%;
   left: 10%;
@@ -1242,7 +1242,7 @@ a {
   right: 3%;
 }
 #face-type-flow .flow-box:nth-child(2)::after {
-  content: url(/images/flow_connect.png);
+  content: url(../images/flow_connect.png);
   position: absolute;
   bottom: -35%;
   left: 10%;
@@ -1250,7 +1250,7 @@ a {
   transform: scale(0.8);
 }
 #face-type-flow .flow-box:nth-child(3)::after {
-  content: url(/images/flow_connect.png);
+  content: url(../images/flow_connect.png);
   position: absolute;
   bottom: -35%;
   left: 40%;
@@ -1258,7 +1258,7 @@ a {
   transform: scale(0.8);
 }
 #face-type-flow .flow-box:nth-child(4)::after {
-  content: url(/images/flow_connect.png);
+  content: url(../images/flow_connect.png);
   position: absolute;
   bottom: -35%;
   left: 40%;
@@ -1266,7 +1266,7 @@ a {
   transform: scale(0.8);
 }
 #face-type-flow .flow-box:nth-child(5)::after {
-  content: url(/images/flow_connect.png);
+  content: url(../images/flow_connect.png);
   position: absolute;
   bottom: -38%;
   left: 0%;
@@ -1274,7 +1274,7 @@ a {
   transform: scale(0.8);
 }
 #face-type-flow .flow-box:nth-child(6)::after {
-  content: url(/images/flow_connect.png);
+  content: url(../images/flow_connect.png);
   position: absolute;
   bottom: -35%;
   left: 10%;
@@ -1494,7 +1494,7 @@ a {
   right: -25%;
 }
 #frame-type-flow .flow-box:nth-child(2)::after {
-  content: url(/images/flow_connect.png);
+  content: url(../images/flow_connect.png);
   position: absolute;
   bottom: -35%;
   left: 10%;
@@ -1502,7 +1502,7 @@ a {
   transform: scale(0.8);
 }
 #frame-type-flow .flow-box:nth-child(3)::after {
-  content: url(/images/flow_connect.png);
+  content: url(../images/flow_connect.png);
   position: absolute;
   bottom: -32%;
   left: 40%;
@@ -1510,7 +1510,7 @@ a {
   transform: scale(0.8);
 }
 #frame-type-flow .flow-box:nth-child(4)::after {
-  content: url(/images/flow_connect.png);
+  content: url(../images/flow_connect.png);
   position: absolute;
   bottom: -31%;
   left: 40%;
@@ -1518,7 +1518,7 @@ a {
   transform: scale(0.8);
 }
 #frame-type-flow .flow-box:nth-child(5)::after {
-  content: url(/images/flow_connect.png);
+  content: url(../images/flow_connect.png);
   position: absolute;
   bottom: -40%;
   left: 0%;
