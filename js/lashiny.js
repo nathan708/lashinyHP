@@ -20,7 +20,7 @@ $(window).on('load', function () {
 });
 
 
-// ナビメニューからリンク先までスクロールさせる
+// // ナビメニューからリンク先までスクロールさせる
 
 $('#page-link a[href*="#"]').click(function () {//全てのページ内リンクに適用させたい場合はa[href*="#"]のみでもOK
 	var elmHash = $(this).attr('href'); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
@@ -30,7 +30,20 @@ $('#page-link a[href*="#"]').click(function () {//全てのページ内リンク
 });
 
 
-
+$(function () {
+	// 別ページの場合は以下
+var urlHash = location.hash;
+if (urlHash) {
+	$('body,html').stop().scrollTop(0);
+	setTimeout(function(){
+		// ヘッダー固定の場合はヘッダーの高さを数値で入れる、固定でない場合は0
+		var headerHight = 130;
+		var target = $(urlHash);
+		var position = target.offset().top - headerHight;
+		$('body,html').stop().animate({scrollTop:position}, 400);
+}, 100);
+}
+});
 // Page top リンクを出す
 
 
@@ -116,11 +129,11 @@ $(window).on('load', function(){
 });
 
 
-// カルーセル用
+// カルーセル用-Voice
 $('.slider').slick({
 	autoplay: true,//自動的に動き出すか。初期値はfalse。
 	infinite: true,//スライドをループさせるかどうか。初期値はtrue。
-	speed: 500,//スライドのスピード。初期値は300。
+	speed: 300,//スライドのスピード。初期値は300。
 	slidesToShow: 3,//スライドを画面に3枚見せる
 	slidesToScroll: 1,//1回のスクロールで1枚の写真を移動して見せる
 	prevArrow: '<div class="slick-prev"></div>',//矢印部分PreviewのHTMLを変更

@@ -218,18 +218,14 @@ a {
   bottom: 0;
   right: 0;
   opacity: 0;
-  animation: bgAnime 30s infinite; /* 3画像 × 各10s = 30s */
+  animation: bgAnime 15s infinite; /* 3画像 × 各10s = 30s */
 }
 .box-top-bg-img .src1 {
   background-image: url(../images/index/Lashiny.jpg); /* 背景の画像を指定 */
 }
 .box-top-bg-img .src2 {
-  background-image: url(../images/index/toptest2.jpeg); /* 背景の画像を指定 */
-  animation-delay: 10s;
-}
-.box-top-bg-img .src3 {
-  background-image: url(../images/index/toptest3.jpeg); /* 背景の画像を指定 */
-  animation-delay: 20s;
+  background-image: url(../images/index/top2.jpg); /* 背景の画像を指定 */
+  animation-delay: 8s;
 }
 @keyframes bgAnime {
   0% {
@@ -345,7 +341,7 @@ a {
   border-radius: 30px;
 }
 #menu .menu-boxes .menu-box .menu-box-background {
-  background-color: #e6c4b3;
+  background-color: #FEF4F2;
   opacity: 0.68;
   padding: 30px 10px;
   position: absolute;
@@ -477,37 +473,38 @@ a {
 
 #voice {
   margin-top: 90px;
-  /*==================================================
-  スライダーのためのcss
-  ===================================*/
-  /*矢印の設定*/
-  /*戻る、次へ矢印の位置*/
-  /*ドットナビゲーションの設定*/
 }
-#voice .slider { /*横幅94%で左右に余白を持たせて中央寄せ*/
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider { /*横幅94%で左右に余白を持たせて中央寄せ*/
   width: 94%;
   margin: 0 auto;
 }
-#voice .slider img {
+.slider img {
   width: 40vw; /*スライダー内の画像を60vwにしてレスポンシブ化*/
   height: auto;
 }
 @media (max-width: 564px) {
-  #voice .slider img {
+  .slider img {
     width: 60vw;
   }
 }
-#voice .slider .slick-slide {
+.slider .slick-slide {
   transform: scale(0.8); /*左右の画像のサイズを80%に*/
   transition: all 0.5s; /*拡大や透過のアニメーションを0.5秒で行う*/
   opacity: 0.5; /*透過50%*/
 }
-#voice .slider .slick-slide.slick-center {
+.slider .slick-slide.slick-center {
   transform: scale(1); /*中央の画像のサイズだけ等倍に*/
   opacity: 1; /*透過なし*/
 }
-#voice .slick-prev,
-#voice .slick-next {
+
+/*矢印の設定*/
+/*戻る、次へ矢印の位置*/
+.slick-prev,
+.slick-next {
   position: absolute; /*絶対配置にする*/
   top: 42%;
   cursor: pointer; /*マウスカーソルを指マークに*/
@@ -517,35 +514,42 @@ a {
   height: 15px;
   width: 15px;
 }
-#voice .slick-prev { /*戻る矢印の位置と形状*/
+
+.slick-prev { /*戻る矢印の位置と形状*/
   left: -1.5%;
   transform: rotate(-135deg);
 }
-#voice .slick-next { /*次へ矢印の位置と形状*/
+
+.slick-next { /*次へ矢印の位置と形状*/
   right: -1.5%;
   transform: rotate(45deg);
 }
-#voice .slick-dots {
+
+/*ドットナビゲーションの設定*/
+.slick-dots {
   text-align: center;
   margin: 20px 0 0 0;
 }
-#voice .slick-dots li {
+.slick-dots li {
   display: inline-block;
   margin: 0 5px;
 }
-#voice .slick-dots button {
+.slick-dots button {
   color: transparent;
   outline: none;
   width: 8px; /*ドットボタンのサイズ*/
-  height: 8px; /*ドットボタンのサイズ*/
+  height: 16px; /*ドットボタンのサイズ*/
   display: block;
   border-radius: 50%;
-  background: #ccc; /*ドットボタンの色*/
+  background: #E5C4B2; /*ドットボタンの色*/
 }
-#voice .slick-dots .slick-active button {
+.slick-dots .slick-active button {
   background: #333; /*ドットボタンの現在地表示の色*/
 }
 
+/*==================================================
+スライダーのためのcss
+===================================*/
 #faq {
   /*アコーディオン全体*/
 }
@@ -671,6 +675,22 @@ a {
 .box-top-bg-img .profile-top {
   background-image: url(../images/profile/profile-top.jpg);
 }
+.box-top-bg-img .profile-top-inner {
+  position: relative;
+  padding: 70vh 0;
+}
+.box-top-bg-img .profile-top-inner-lead {
+  position: absolute;
+  font-size: 1.5rem;
+  padding-left: 4rem;
+  text-indent: -4rem;
+  left: 20%;
+  line-height: 3rem;
+}
+.box-top-bg-img .profile-top-inner-lead span {
+  font-size: 2rem;
+  margin: 0 0.5rem;
+}
 
 #archivement-profile {
   margin-top: 50px;
@@ -678,9 +698,21 @@ a {
 #archivement-profile .archivement-profile-info {
   margin-top: 50px;
 }
-#archivement-profile .archivement-profile-info p {
+#archivement-profile .archivement-profile-info .slider-info {
+  height: 400px;
+  width: 650px;
+  padding: 10px 100px;
+  background-color: #F3E3DA;
+}
+#archivement-profile .archivement-profile-info .slider-info .slider-info-title {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: 40px;
+}
+#archivement-profile .archivement-profile-info .slider-info .slider-info-text {
   margin-top: 30px;
   line-height: 2.5;
+  margin-left: 30px;
 }
 
 #certification {
@@ -707,32 +739,791 @@ a {
     width: 100%;
   }
 }
-#certification .certification-box .certification-info p {
+#certification .certification-box .certification-info .certification-info-text {
   font-size: 1rem;
-  line-height: 2;
+  line-height: 2rem;
+  margin: 20px 0;
 }
 @media (max-width: 768px) {
-  #certification .certification-box .certification-info p {
+  #certification .certification-box .certification-info .certification-info-text {
     text-align: center;
     margin: 0 auto;
   }
 }
 #certification .certification-box .certification-img {
   width: 48%;
+  margin: 10% 0;
 }
 @media (max-width: 768px) {
   #certification .certification-box .certification-img {
     width: 100%;
-  }
-}
-#certification .certification-box .certification-img img {
-  margin-top: 30px;
-}
-@media (max-width: 768px) {
-  #certification .certification-box .certification-img img {
-    width: 100%;
     margin-top: 30px;
   }
+}
+
+#archivement .archivement-info .archivement-table {
+  margin: 30px auto 0;
+}
+#archivement .archivement-info .archivement-table td {
+  padding: 30px 0;
+}
+#archivement .archivement-info .archivement-table .archivement-table-client p {
+  margin-right: 60px;
+  text-align: right;
+}
+#archivement .archivement-info .archivement-info-more {
+  margin-bottom: 100px;
+}
+#archivement .archivement-info .archivement-info-more p {
+  text-align: center;
+  margin: 30px 0;
+}
+
+#instagram .instagram-photos {
+  margin: 50px 0;
+  text-align: center;
+}
+#instagram .instagram-photos img {
+  width: 20%;
+}
+#instagram .instagram-info {
+  text-align: center;
+}
+#instagram .instagram-info p {
+  line-height: 2.5rem;
+}
+#instagram .btn {
+  padding: 20px;
+}
+
+#contact {
+  margin-bottom: 50px;
+}
+#contact .contact-info {
+  margin: 50px 0;
+  text-align: center;
+}
+#contact .contact-info p {
+  line-height: 2.5rem;
+}
+#contact .contact-icons {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+#contact .contact-icons .contact-icons-link {
+  margin: 0 40px;
+}
+#contact .contact-icons .contact-icons-link img {
+  margin: 0 30px;
+  width: 100px;
+}
+
+/* --- 全体のBOX定義 ---------------------------------------- */
+.box-top-bg-img {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  overflow: hidden;
+  /* --- 背景の指定 ------------------------------------------- */
+}
+.box-top-bg-img .bgImgNoAnime {
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.box-top-bg-img .p-color-top {
+  background-image: url(../images/personal_color/test.jpg);
+}
+.box-top-bg-img .p-color-top-inner {
+  position: relative;
+  padding: 50vh 0;
+}
+.box-top-bg-img .p-color-top-inner-box-background {
+  background-color: #fff;
+  opacity: 0.68;
+  padding: 60px 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  text-align: center;
+  border-radius: 50px;
+  letter-spacing: 0.24em;
+}
+.box-top-bg-img .p-color-top-inner-box-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  line-height: 3rem;
+}
+.box-top-bg-img .p-color-top-inner-lead {
+  position: absolute;
+  font-size: 1.5rem;
+  padding-left: 4rem;
+  text-indent: -4rem;
+  left: 20%;
+  line-height: 3rem;
+}
+.box-top-bg-img .p-color-top-inner-lead span {
+  font-size: 2rem;
+  margin: 0 0.5rem;
+}
+
+/* --- パーソナルカラーとは ---------------------------------------- */
+#p-color-explain {
+  margin-top: 200px;
+}
+#p-color-explain .p-color-explain-inner {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+#p-color-explain .p-color-explain-inner-textBox {
+  width: 45%;
+  padding-left: 60px;
+}
+#p-color-explain .p-color-explain-inner-textBox-title {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 30px;
+}
+#p-color-explain .p-color-explain-inner-textBox-text {
+  margin-top: 30px;
+  line-height: 2rem;
+  font-size: 1.25rem;
+}
+#p-color-explain .p-color-explain-inner-imgBox {
+  width: 45%;
+}
+#p-color-explain .p-color-explain-inner-imgBox img {
+  box-shadow: 20px 25px #EFCBC3;
+}
+#p-color-explain .p-color-explain-inner::after {
+  content: " ";
+  width: 80%;
+  height: 110%;
+  padding: 30px;
+  top: -10%;
+  right: 0px;
+  position: absolute;
+  background-color: #F3E3DA;
+  z-index: -1;
+}
+
+/* --- １６タイプパーソナルカラーとは ---------------------------------------- */
+#types-color-explain {
+  margin-top: 200px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  max-height: 800px;
+}
+#types-color-explain .types-color-explain-inner {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+#types-color-explain .types-color-explain-inner-textBox {
+  width: 50%;
+  padding-right: 60px;
+}
+#types-color-explain .types-color-explain-inner-textBox-title {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 30px;
+}
+#types-color-explain .types-color-explain-inner-textBox-text {
+  font-size: 1.25rem;
+  padding: 0 10%;
+  margin-top: 30px;
+  line-height: 2rem;
+}
+#types-color-explain .types-color-explain-inner-imgBox {
+  width: 40%;
+}
+#types-color-explain .types-color-explain-inner-imgBox img {
+  box-shadow: -20px 25px #EFCBC3;
+}
+#types-color-explain .types-color-explain-inner-imgBox-2 {
+  width: 300px;
+  position: absolute;
+  right: 100px;
+  bottom: -100px;
+  z-index: -1;
+}
+#types-color-explain .types-color-explain-inner::after {
+  content: " ";
+  width: 80%;
+  height: 110%;
+  padding: 30px;
+  top: -10%;
+  left: 0px;
+  position: absolute;
+  background-color: #F3E3DA;
+  z-index: -1;
+}
+
+#p-color-flow {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+#p-color-flow .flow-box {
+  border: 4px solid #E1C5B4;
+  width: 80%;
+  margin: 100px 0;
+  position: relative;
+}
+#p-color-flow .flow-box-inner {
+  margin: 40px 80px;
+}
+#p-color-flow .flow-box-inner h2 {
+  margin: 30px 0;
+  font-size: 1.8rem;
+}
+#p-color-flow .flow-box-inner h3 {
+  margin: 30px 0;
+  line-height: 2.5rem;
+  font-size: 1.8rem;
+}
+#p-color-flow .flow-box-inner-text {
+  padding: 0px 50px;
+  line-height: 2rem;
+  font-size: 1.25rem;
+}
+#p-color-flow .flow-box-inner-text-indent {
+  text-indent: -1em;
+  margin-top: 30px;
+  margin-left: 1em;
+}
+#p-color-flow .flow-box:nth-child(4), #p-color-flow .flow-box:nth-child(5) {
+  margin-left: 20%;
+}
+#p-color-flow .flow-box .flow-box-img-step1 img {
+  position: absolute;
+  width: 50%;
+  top: 10%;
+  right: -15%;
+  z-index: 1;
+}
+#p-color-flow .flow-box .flow-box-img-step3 img {
+  position: absolute;
+  width: 35%;
+  top: 30%;
+  left: -25%;
+  z-index: 1;
+}
+#p-color-flow .flow-box .flow-box-img-step3 .flow-box-inner {
+  padding-left: 10%;
+}
+#p-color-flow .flow-box .flow-box-img-step4 img {
+  position: absolute;
+  width: 30%;
+  top: -40%;
+  right: -2%;
+  z-index: 1;
+}
+#p-color-flow .flow-box .flow-box-img-step4 .flow-box-inner {
+  padding-left: 10%;
+}
+#p-color-flow .flow-box .flow-box-img-step5 img {
+  position: absolute;
+  width: 50%;
+  top: -10%;
+  z-index: 1;
+  right: -25%;
+}
+#p-color-flow .flow-box:nth-child(2)::after {
+  content: url(/images/flow_connect.png);
+  position: absolute;
+  bottom: -35%;
+  left: 10%;
+  display: inline-block;
+  transform: scale(0.8);
+}
+#p-color-flow .flow-box:nth-child(3)::after {
+  content: url(/images/flow_connect.png);
+  position: absolute;
+  bottom: -30%;
+  left: 40%;
+  display: inline-block;
+  transform: scale(0.8);
+}
+#p-color-flow .flow-box:nth-child(4)::after {
+  content: url(/images/flow_connect.png);
+  position: absolute;
+  bottom: -30%;
+  left: 40%;
+  display: inline-block;
+  transform: scale(0.8);
+}
+#p-color-flow .flow-box:nth-child(5)::after {
+  content: url(/images/flow_connect.png);
+  position: absolute;
+  bottom: -35%;
+  left: 0%;
+  display: inline-block;
+  transform: scale(0.8);
+}
+#p-color-flow .flow-box:nth-child(6)::after {
+  content: url(/images/flow_connect.png);
+  position: absolute;
+  bottom: -30%;
+  left: 10%;
+  display: inline-block;
+  transform: scale(0.8);
+}
+
+/* --- 全体のBOX定義 ---------------------------------------- */
+.box-top-bg-img {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  overflow: hidden;
+  /* --- 背景の指定 ------------------------------------------- */
+}
+.box-top-bg-img .bgImgNoAnime {
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.box-top-bg-img .f-type-top {
+  background-image: url(../images/3_2_faceType/faceTypeTop.jpg);
+}
+.box-top-bg-img .f-type-top-inner {
+  position: relative;
+  padding: 50vh 0;
+}
+.box-top-bg-img .f-type-top-inner-box-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  line-height: 3rem;
+}
+.box-top-bg-img .f-type-top-inner-lead {
+  position: absolute;
+  font-size: 1.5rem;
+  padding-left: 4rem;
+  text-indent: -4rem;
+  left: 20%;
+  line-height: 3rem;
+}
+.box-top-bg-img .f-type-top-inner-lead span {
+  font-size: 2rem;
+  margin: 0 0.5rem;
+}
+
+/* --- 顔診断とは ---------------------------------------- */
+#f-type-explain {
+  margin-top: 200px;
+}
+#f-type-explain .f-type-explain-inner {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+#f-type-explain .f-type-explain-inner-textBox {
+  width: 50%;
+  padding-left: 120px;
+}
+#f-type-explain .f-type-explain-inner-textBox-title {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 80px 30px;
+}
+#f-type-explain .f-type-explain-inner-textBox-text {
+  margin-top: 30px;
+  line-height: 2.5rem;
+  font-size: 1.25rem;
+}
+#f-type-explain .f-type-explain-inner-imgBox {
+  width: 35%;
+}
+#f-type-explain .f-type-explain-inner-imgBox img {
+  box-shadow: 20px 25px #EFCBC3;
+}
+#f-type-explain .f-type-explain-inner::after {
+  content: " ";
+  width: 80%;
+  height: 105%;
+  padding: 30px;
+  top: -5%;
+  right: 0px;
+  position: absolute;
+  background-color: #F3E3DA;
+  z-index: -1;
+}
+
+#face-type-flow {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+#face-type-flow .flow-box {
+  border: 4px solid #E1C5B4;
+  width: 80%;
+  margin: 100px 0;
+  position: relative;
+}
+#face-type-flow .flow-box-inner {
+  margin: 40px 80px;
+}
+#face-type-flow .flow-box-inner h2 {
+  margin: 30px 0;
+  font-size: 1.8rem;
+}
+#face-type-flow .flow-box-inner h3 {
+  margin: 30px 0;
+  line-height: 2.5rem;
+  font-size: 1.8rem;
+}
+#face-type-flow .flow-box-inner-text {
+  padding: 0px 50px;
+  line-height: 2rem;
+  font-size: 1.25rem;
+}
+#face-type-flow .flow-box-inner-text-indent {
+  text-indent: -1em;
+  margin-top: 30px;
+  margin-left: 1em;
+}
+#face-type-flow .flow-box:nth-child(4), #face-type-flow .flow-box:nth-child(5) {
+  margin-left: 20%;
+}
+#face-type-flow .flow-box .flow-box-img-step1 img {
+  position: absolute;
+  width: 50%;
+  top: 10%;
+  right: -15%;
+  z-index: 1;
+}
+#face-type-flow .flow-box .flow-box-img-step3 img {
+  position: absolute;
+  width: 35%;
+  top: 30%;
+  left: -25%;
+  z-index: 1;
+}
+#face-type-flow .flow-box .flow-box-img-step3 .flow-box-inner {
+  padding-left: 10%;
+}
+#face-type-flow .flow-box .flow-box-img-step5-1 img {
+  position: absolute;
+  width: 35%;
+  top: -30%;
+  right: -20%;
+  z-index: 2;
+}
+#face-type-flow .flow-box .flow-box-img-step5-1 .flow-box-inner {
+  padding-left: 10%;
+}
+#face-type-flow .flow-box .flow-box-img-step5-2 img {
+  position: absolute;
+  width: 30%;
+  top: 58%;
+  z-index: 1;
+  right: 3%;
+}
+#face-type-flow .flow-box:nth-child(2)::after {
+  content: url(/images/flow_connect.png);
+  position: absolute;
+  bottom: -35%;
+  left: 10%;
+  display: inline-block;
+  transform: scale(0.8);
+}
+#face-type-flow .flow-box:nth-child(3)::after {
+  content: url(/images/flow_connect.png);
+  position: absolute;
+  bottom: -35%;
+  left: 40%;
+  display: inline-block;
+  transform: scale(0.8);
+}
+#face-type-flow .flow-box:nth-child(4)::after {
+  content: url(/images/flow_connect.png);
+  position: absolute;
+  bottom: -35%;
+  left: 40%;
+  display: inline-block;
+  transform: scale(0.8);
+}
+#face-type-flow .flow-box:nth-child(5)::after {
+  content: url(/images/flow_connect.png);
+  position: absolute;
+  bottom: -38%;
+  left: 0%;
+  display: inline-block;
+  transform: scale(0.8);
+}
+#face-type-flow .flow-box:nth-child(6)::after {
+  content: url(/images/flow_connect.png);
+  position: absolute;
+  bottom: -35%;
+  left: 10%;
+  display: inline-block;
+  transform: scale(0.8);
+}
+
+/* --- 全体のBOX定義 ---------------------------------------- */
+.box-top-bg-img {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  overflow: hidden;
+  /* --- 背景の指定 ------------------------------------------- */
+}
+.box-top-bg-img .bgImgNoAnime {
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.box-top-bg-img .frame-type-top {
+  background-image: url(../images/3_3_frameType/frame_type1.jpg);
+}
+.box-top-bg-img .frame-type-top-inner {
+  position: relative;
+  padding: 50vh 0;
+}
+.box-top-bg-img .frame-type-top-inner-box-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  line-height: 3rem;
+}
+.box-top-bg-img .frame-type-top-inner-lead {
+  position: absolute;
+  font-size: 1.5rem;
+  padding-left: 4rem;
+  text-indent: -4rem;
+  left: 20%;
+  line-height: 3rem;
+}
+.box-top-bg-img .frame-type-top-inner-lead span {
+  font-size: 2rem;
+  margin: 0 0.5rem;
+}
+
+/* --- 骨格診断とは ---------------------------------------- */
+#frame-type-explain {
+  margin-top: 200px;
+}
+#frame-type-explain .frame-type-explain-inner {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+#frame-type-explain .frame-type-explain-inner-textBox {
+  width: 45%;
+  padding-left: 60px;
+}
+#frame-type-explain .frame-type-explain-inner-textBox-title {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 30px;
+}
+#frame-type-explain .frame-type-explain-inner-textBox-text {
+  margin-top: 30px;
+  line-height: 2rem;
+  font-size: 1.25rem;
+}
+#frame-type-explain .frame-type-explain-inner-imgBox {
+  width: 45%;
+}
+#frame-type-explain .frame-type-explain-inner-imgBox img {
+  box-shadow: 20px 25px #EFCBC3;
+}
+#frame-type-explain .frame-type-explain-inner::after {
+  content: " ";
+  width: 80%;
+  height: 110%;
+  padding: 30px;
+  top: -10%;
+  right: 0px;
+  position: absolute;
+  background-color: #F3E3DA;
+  z-index: -1;
+}
+
+/* --- 自分型骨格診断とは ---------------------------------------- */
+#self-frame-type-explain {
+  margin-top: 200px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1600px;
+  max-height: 800px;
+}
+#self-frame-type-explain .self-frame-type-explain-inner {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+#self-frame-type-explain .self-frame-type-explain-inner-textBox {
+  width: 50%;
+  padding-right: 60px;
+}
+#self-frame-type-explain .self-frame-type-explain-inner-textBox-title {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 30px;
+}
+#self-frame-type-explain .self-frame-type-explain-inner-textBox-text {
+  font-size: 1.25rem;
+  padding: 0 10%;
+  margin-top: 30px;
+  line-height: 2rem;
+}
+#self-frame-type-explain .self-frame-type-explain-inner-imgBox {
+  width: 40%;
+}
+#self-frame-type-explain .self-frame-type-explain-inner-imgBox img {
+  box-shadow: -20px 25px #EFCBC3;
+}
+#self-frame-type-explain .self-frame-type-explain-inner-imgBox-2 {
+  width: 300px;
+  position: absolute;
+  right: 100px;
+  bottom: -100px;
+  z-index: -1;
+}
+#self-frame-type-explain .self-frame-type-explain-inner::after {
+  content: " ";
+  width: 80%;
+  height: 110%;
+  padding: 30px;
+  top: -10%;
+  left: 0px;
+  position: absolute;
+  background-color: #F3E3DA;
+  z-index: -1;
+}
+
+#frame-type-flow {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+#frame-type-flow .flow-box {
+  border: 4px solid #E1C5B4;
+  width: 80%;
+  margin: 100px 0;
+  position: relative;
+}
+#frame-type-flow .flow-box-inner {
+  margin: 40px 80px;
+}
+#frame-type-flow .flow-box-inner h2 {
+  margin: 30px 0;
+  font-size: 1.8rem;
+}
+#frame-type-flow .flow-box-inner h3 {
+  margin: 30px 0;
+  line-height: 2.5rem;
+  font-size: 1.8rem;
+}
+#frame-type-flow .flow-box-inner-text {
+  padding: 0px 50px;
+  line-height: 2rem;
+  font-size: 1.25rem;
+}
+#frame-type-flow .flow-box-inner-text-indent {
+  text-indent: -1em;
+  margin-top: 30px;
+  margin-left: 1em;
+}
+#frame-type-flow .flow-box:nth-child(4), #frame-type-flow .flow-box:nth-child(5) {
+  margin-left: 20%;
+}
+#frame-type-flow .flow-box .flow-box-img-step1 img {
+  position: absolute;
+  width: 50%;
+  top: -20%;
+  right: -20%;
+  z-index: 1;
+}
+#frame-type-flow .flow-box .flow-box-img-step3 img {
+  position: absolute;
+  width: 35%;
+  top: 30%;
+  left: -25%;
+  z-index: 1;
+}
+#frame-type-flow .flow-box .flow-box-img-step3 .flow-box-inner {
+  padding-left: 10%;
+}
+#frame-type-flow .flow-box .flow-box-img-step4 img {
+  position: absolute;
+  width: 30%;
+  top: -40%;
+  right: -2%;
+  z-index: 1;
+}
+#frame-type-flow .flow-box .flow-box-img-step4 .flow-box-inner {
+  padding-left: 10%;
+}
+#frame-type-flow .flow-box .flow-box-img-step5 img {
+  position: absolute;
+  width: 40%;
+  top: -26%;
+  z-index: 1;
+  right: -25%;
+}
+#frame-type-flow .flow-box:nth-child(2)::after {
+  content: url(/images/flow_connect.png);
+  position: absolute;
+  bottom: -35%;
+  left: 10%;
+  display: inline-block;
+  transform: scale(0.8);
+}
+#frame-type-flow .flow-box:nth-child(3)::after {
+  content: url(/images/flow_connect.png);
+  position: absolute;
+  bottom: -32%;
+  left: 40%;
+  display: inline-block;
+  transform: scale(0.8);
+}
+#frame-type-flow .flow-box:nth-child(4)::after {
+  content: url(/images/flow_connect.png);
+  position: absolute;
+  bottom: -31%;
+  left: 40%;
+  display: inline-block;
+  transform: scale(0.8);
+}
+#frame-type-flow .flow-box:nth-child(5)::after {
+  content: url(/images/flow_connect.png);
+  position: absolute;
+  bottom: -40%;
+  left: 0%;
+  display: inline-block;
+  transform: scale(0.8);
 }
 
 footer {
