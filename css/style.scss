@@ -6,17 +6,21 @@ $ta: 768px; // タブレット以下
 $sp: 564px; // スマホ
 
 
-
+// 画面サイズが1024px以上になったら適応
 @mixin pc {
-  @media (max-width: ($pc)) {
+  @media (min-width: ($pc)) {
     @content;
   }
 }
+
+// 画面サイズが768以下になったら適応
 @mixin ta {
   @media (max-width: ($ta)) {
     @content;
   }
 }
+
+// 画面サイズが564px以下になった適応
 @mixin sp {
   @media (max-width: ($sp)) {
     @content;
@@ -27,6 +31,9 @@ $sp: 564px; // スマホ
 html {
   font-size: 16px;
   font-family: fot-tsukuardgothic-std, sans-serif;
+  font-family: 'Allura', cursive;
+  font-family: 'Damion', cursive;
+  font-family: 'Zen Maru Gothic', sans-serif;
 
   color: #442508;
   background-color: #fdefe9;
@@ -57,8 +64,12 @@ a {
 
 
   h2 {
-    font-size: 1.7rem;
+    font-size: 2.5rem;
+    letter-spacing: 0.12em;
     padding: 10px;
+    font-family: "Damion";
+    font-weight: normal;
+
 
   }
 }
@@ -72,7 +83,7 @@ a {
   border-radius: 100px;
   letter-spacing: 0.12em;
   margin: 50px auto;
-          box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .3);
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .3);
 
 
   &:hover {
@@ -122,9 +133,9 @@ a {
     /*========= ボタンのためのCSS ===============*/
     .openbtn{
       position:fixed;
-        z-index: 9999;/*ボタンを最前面に*/
+      z-index: 9999;/*ボタンを最前面に*/
       top:10px;
-      left: 10px;
+      right: 10px;
       cursor: pointer;
         width: 50px;
         height:50px;
@@ -401,12 +412,18 @@ a {
       @include ta {
         width: 100%;
         margin-top: 20px;
+
       }
       
       img {
-        height: 280px;
+        height: 300px;
         object-fit: cover;
         border-radius: 30px;
+
+        @include sp {
+          max-height: 150px;
+        }
+
       }
 
       .menu-box-background {
@@ -420,7 +437,7 @@ a {
         width: 80%;
         text-align: center;
         border-radius: 50px;
-        letter-spacing: 0.24em;
+        letter-spacing: 0.2em;
         
       }
       .menu-text {
@@ -430,7 +447,7 @@ a {
         transform: translate(-50%, -50%);
         width: 80%;
         text-align: center;
-        letter-spacing: 0.24em;
+        letter-spacing: 0.2em;
       }
     }
   }
@@ -457,12 +474,21 @@ a {
 
     .reservation-box {
       position: relative;
-      padding: 0.5em 1em;
       border: solid 5px #e6c4b3;/*線*/
       border-radius: 20px;/*角の丸み*/
       margin-top: 6%;
-      height: 200px;
+      // height: 200px;
       // margin-bottom: 20px;
+      width: 100%;
+
+
+
+      &::before {
+        content: "";
+        padding-top: 100%;
+        display: block;
+      }
+
 
       @include sp {
         height: 150px;
@@ -525,8 +551,6 @@ a {
           background-color: #f1d9ce;
         }
       }
-
-
     
       &-number {
         background: #e6c4b3;
@@ -542,14 +566,26 @@ a {
       }
 
       &-title {
+        position: absolute;
+        top: 15%;
         color: #f47a7a;
-        text-align: center;
-        margin: 30px 0 15px;
         letter-spacing: 0.12em;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
       }
 
       &-text {
-        padding: 0 10px;
+        position: absolute;
+        top: 30%;
+        padding: 10px 30px;
+        // margin: 0 auto;
+        // left: 50%;
+        // transform: translateX(-50%);
+        // -webkit-transform: translateX(-50%);
+        // -ms-transform: translateX(-50%);
+
         line-height: 1.5rem;
       }
     }
@@ -559,60 +595,54 @@ a {
 #voice {
   margin-top: 90px;
 
-  // .voice-boxes {
-  //   display: flex;
-  //   justify-content: space-between;
 
+  .voice-box {
 
+    .voice-info {
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      width: 80%;
+      line-height: 1.5rem;
+      letter-spacing: 0.12em;
 
-  //   .voice-box {
-  //     width: 49%;
-  //     position: relative;
+      @include ta {
+        top: 10%;
+        font-size: 0.9rem;
+        line-height: 1rem;
+      }
+    }
 
-  //     .voice-info {
-  //       position: absolute;
-  //       top: 20%;
-  //       left: 10%;
-  //       width: 80%;
-  //       line-height: 1.5rem;
-  //       letter-spacing: 0.12em;
-  //     }
+    .voice-person {
+      position: absolute;
+      top: 70%;
+      left: 10%;
+      width: 70%;
+      line-height: 1.5rem;
+      letter-spacing: 0.24em;
+      text-align: right;
+    }
+  }
 
-  //     .voice-person {
-  //       position: absolute;
-  //       top: 70%;
-  //       left: 10%;
-  //       width: 70%;
-  //       line-height: 1.5rem;
-  //       letter-spacing: 0.24em;
-  //       text-align: right;
-  //     }
-  //   }
-  // }
-
-
-  
 }
 
-
+// 共通スライダー！！！！（トップ・プロフィール）
 /*==================================================
 スライダーのためのcss
 ===================================*/
 .slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
   width:94%;
-  margin:0 auto;
+  margin:20px auto;
   
-  img {
-    width:40vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
-    height:auto;
-
+  .slider-wrap {
+    position: relative;
+    max-width:40vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+    // height:auto;
     @include sp {
-      width: 60vw;
+      max-width: 60vw;
     }
   }
 
-
-  
   .slick-slide {
     transform: scale(0.8);/*左右の画像のサイズを80%に*/
     transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
@@ -660,6 +690,7 @@ a {
   li {
     display:inline-block;
     margin:0 5px;
+    display: none;
   }
   
   button {
@@ -754,8 +785,9 @@ a {
       .box {
         display: none;/*はじめは非表示*/
         background: #f3f3f3;
-      margin:0 3% 3% 3%;
+        margin:0 3% 3% 3%;
         padding: 3%;
+        border-radius: 30px;
 
     p {
       // padding: 50px 50px;
@@ -854,7 +886,7 @@ a {
         text-indent: -4rem;
         left: 20%;
         line-height: 3rem;
-        
+        font-family: "Hannari";
 
 
 
@@ -882,16 +914,36 @@ a {
         padding: 10px 100px;
         background-color:#F3E3DA;
 
+        @include ta {
+          height: 60vh;
+        }
+
         .slider-info-title {
           text-align: center;
           font-size: 1.3rem;
           margin-top: 40px;
+
+          @include ta() {
+            width: 80vw;
+            margin: 0 auto ;
+            line-height: 2rem;
+            padding: 10px;
+          }
+
         }
 
         .slider-info-text {
           margin-top: 30px;
           line-height: 2.5;
           margin-left: 30px;
+
+          @include ta {
+            width: 80vw;
+            margin: 10px auto ;
+            line-height: 2rem;
+
+          }
+
       }
     }
   }
@@ -955,15 +1007,35 @@ a {
     
     .archivement-table{
       margin: 30px  auto 0;
+
+      
       
       td {
         padding: 30px 0;
+
+        @include ta {
+          padding: 10px;
+
+          display: block;
+          text-align: center;
+          padding: 15px 40px;
+        }
+
       }
       
       .archivement-table-client {
         p {
           margin-right: 60px;
           text-align: right;
+
+          @include ta {
+
+            margin: 0;
+            text-align: center;
+            text-decoration: underline;
+          }
+
+
         }
       }
     }
@@ -1023,6 +1095,11 @@ a {
       img {
         margin: 0 30px;
         width: 100px;
+
+        @include ta {
+          margin: 0;
+        }
+
       }
       
     }
@@ -1031,7 +1108,27 @@ a {
 
 
 
+
+// 題字-english title
+
+.menu-title {
+  font-size: 1.8rem;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  line-height: 3rem;
+  font-family: "Allura";
+
+}
+
+
+
 // パーソナルカラー診断ーーーーーーーーーーーーーーーーーーーーーーー
+
 
 /* --- 全体のBOX定義 ---------------------------------------- */
 .box-top-bg-img {
@@ -1072,15 +1169,19 @@ a {
           text-align: center;
           border-radius: 50px;
           letter-spacing: 0.24em;
+
+          @include ta {
+            width: 80%;
+          }
           
         }
         &-title {
           position: absolute;
-          top: 50%;
+          top: 52%;
           left: 50%;
           transform: translate(-50%, -50%);
-          width: 80%;
           text-align: center;
+          width: 80%;
           letter-spacing: 0.24em;
           line-height: 3rem;
 
@@ -1109,7 +1210,6 @@ a {
 /* --- パーソナルカラーとは ---------------------------------------- */
 
 #p-color-explain {
-
   margin-top: 200px;
 
 
@@ -1127,6 +1227,23 @@ a {
         text-align: center;
         font-size: 1.5rem;
         padding: 30px;
+        position: relative;
+
+        &::before {
+          content: "Personal Color";
+          position: absolute;
+          top: 0%;
+          left: 25%;
+          scale: (3);
+          font-family: "Allura";
+          letter-spacing: 0.03em;
+          color: #f47a7a;
+          font-weight: 500;
+          transform: rotate(-10deg);
+          font-size: 1.2rem;
+        }
+      
+
       }
 
       &-text {
@@ -1147,21 +1264,19 @@ a {
     }
     
     
+    &::after {
+      content: " ";
+      min-width: 80%;
+      height: 110%;
+      padding: 30px;
+      top: -10%;
+      right: 0%;
+  
+      position: absolute;
+      background-color: #F3E3DA;
+      z-index: -1;
+    }
   }
-  .p-color-explain-inner::after {
-    content: " ";
-    width: 80%;
-    height: 110%;
-    padding: 30px;
-    top: -10%;
-    right: 0px;
-
-    position: absolute;
-    background-color: #F3E3DA;
-    z-index: -1;
-  }
-
-
 }
 
 /* --- １６タイプパーソナルカラーとは ---------------------------------------- */
@@ -1172,8 +1287,7 @@ a {
   position: relative;
   width: 100%;
   height: 100%;
-  max-width: 1600px;
-  max-height: 800px;
+
   
   .types-color-explain-inner {
     display: flex;
@@ -1189,12 +1303,27 @@ a {
         text-align: center;
         font-size: 1.5rem;
         padding: 30px;
+
+        &::before {
+          content: "16types \A Personal Color";
+          white-space: pre;
+          position: absolute;
+          top: -10%;
+          right: 20%;
+          scale: (3);
+          font-family: "Allura";
+          letter-spacing: 0.03em;
+          color: #f47a7a;
+          font-weight: 500;
+          transform: rotate(10deg);
+          font-size: 1.2rem;
+        }
       }
       
       &-text {
         font-size: 1.25rem;
         padding: 0 10%;
-        margin-top: 30px;
+        margin-top: 60px;
         line-height: 2rem;
       }
       
@@ -1202,7 +1331,7 @@ a {
     }
     
     &-imgBox {
-      width: 40%;
+      width: 35%;
       img {
         box-shadow: -20px 25px #EFCBC3;
       }
@@ -1212,22 +1341,22 @@ a {
       width: 300px;
       position: absolute;
       right: 100px;
-      bottom: -100px;
+      bottom: -40%;
       z-index: -1;
     }
-  }
-
-  .types-color-explain-inner::after {
-    content: " ";
-    width: 80%;
-    height: 110%;
-    padding: 30px;
-    top: -10%;
-    left: 0px;
     
-    position: absolute;
-    background-color: #F3E3DA;
-    z-index: -1;
+    &::after {
+      content: " ";
+      width: 80%;
+      height: 110%;
+      padding: 30px;
+      top: -10%;
+      left: -4%;
+      
+      position: absolute;
+      background-color: #F3E3DA;
+      z-index: -2;
+  }
   }
 }
 
@@ -1281,7 +1410,7 @@ a {
       img {
         position: absolute;
         width: 50%;
-        top: 10%;
+        top: 20%;
         right: -15%;
         z-index: 1;
       }
@@ -1419,7 +1548,7 @@ a {
 
         &-title {
           position: absolute;
-          top: 50%;
+          top: 52%;
           left: 50%;
           transform: translate(-50%, -50%);
           width: 80%;
@@ -1470,6 +1599,21 @@ a {
         text-align: center;
         font-size: 1.5rem;
         padding: 80px 30px;
+        position: relative;
+
+        &::before {
+          content: "Face Type";
+          position: absolute;
+          top: 0%;
+          left: 15%;
+          scale: (3);
+          font-family: "Allura";
+          letter-spacing: 0.03em;
+          color: #f47a7a;
+          font-weight: 500;
+          transform: rotate(-10deg);
+          font-size: 1.2rem;
+        }
       }
 
       &-text {
@@ -1488,18 +1632,18 @@ a {
     }
     
     
-  }
-  .f-type-explain-inner::after {
-    content: " ";
-    width: 80%;
-    height: 105%;
-    padding: 30px;
-    top: -5%;
-    right: 0px;
-
-    position: absolute;
-    background-color: #F3E3DA;
-    z-index: -1;
+    &::after {
+      content: " ";
+      width: 80%;
+      height: 105%;
+      padding: 30px;
+      top: -5%;
+      right: 0px;
+  
+      position: absolute;
+      background-color: #F3E3DA;
+      z-index: -1;
+    }
   }
 
 
@@ -1681,7 +1825,7 @@ a {
 
         &-title {
           position: absolute;
-          top: 50%;
+          top: 52%;
           left: 50%;
           transform: translate(-50%, -50%);
           width: 80%;
@@ -1732,6 +1876,22 @@ a {
         text-align: center;
         font-size: 1.5rem;
         padding: 30px;
+        position: relative;
+
+        &::before {
+          content: "Frame Type";
+          position: absolute;
+          top: -30%;
+          left: 25%;
+          scale: (3);
+          font-family: "Allura";
+          letter-spacing: 0.03em;
+          color: #f47a7a;
+          font-weight: 500;
+          transform: rotate(-10deg);
+          font-size: 1.2rem;
+        }
+
       }
 
       &-text {
@@ -1750,9 +1910,8 @@ a {
       }
 
     }
-    
-    
   }
+
   .frame-type-explain-inner::after {
     content: " ";
     width: 80%;
@@ -1794,6 +1953,21 @@ a {
         text-align: center;
         font-size: 1.5rem;
         padding: 30px;
+        position: relative;
+
+        &::before {
+          content: "Personal Frame Type";
+          position: absolute;
+          top: -10%;
+          right: 20%;
+          scale: (3);
+          font-family: "Allura";
+          letter-spacing: 0.03em;
+          color: #f47a7a;
+          font-weight: 500;
+          transform: rotate(10deg);
+          font-size: 1.2rem;
+        }
       }
       
       &-text {
@@ -1969,78 +2143,977 @@ a {
 
 
 
+// menu---------------------------------------
+
+/* --- 全体のBOX定義 ---------------------------------------- */
+.box-top-bg-img {
+  position   : relative;
+  width  : 100%;
+  height     : 100vh;
+  margin     : auto;
+  overflow   : hidden;
+
+  /* --- 背景の指定 ------------------------------------------- */
+  .bgImgNoAnime {
+    background-size: cover;
+    position   : absolute;
+    top        : 0;
+    left       : 0;
+    bottom     : 0;
+    right      : 0;
+  }
+
+  .menu-top {
+    background-image: url(../images/4_menu/menu_top.jpg);
+    
+    &-inner{
+      position: relative;
+      padding: 50vh 0;
+      
+      &-box {
+
+
+        &-title {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 80%;
+          text-align: center;
+          letter-spacing: 0.24em;
+          line-height: 3rem;
+          font-family: "Damion";
+          font-size: 1.2rem;
+          font-weight: normal;
+
+          & span {
+            font-size: 3rem;
+          }
+
+        }
+      }
+
+      &-lead {
+        position: absolute;
+        font-size: 1.5rem;
+        padding-left: 4rem;
+        text-indent: -4rem;
+        left: 20%;
+        line-height: 3rem;
+        
+        span {
+          font-size: 2rem;
+          margin: 0 0.5rem;
+
+        }
+      }
+    }
+  }
+}
+
+/* --- トータルコース ---------------------------------------- */
+
+#totalCourse {
+  margin-top: 50px;
+
+  .totalCourse-inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include ta {
+      flex-direction: column;
+    }
+
+
+
+
+    &-imgBox {
+      width: 35%;
+      position: relative;
+
+      @include ta {
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      &::after {
+        content: "Total course";
+        position: absolute;
+        top: 0%;
+        left: 25%;
+        scale: (3);
+        font-family: "Allura";
+        letter-spacing: 0.03em;
+        color: #f47a7a;
+        font-weight: 500;
+        transform: rotate(-10deg);
+        font-size: 1.2rem;
+
+        @include ta {
+          content: none;
+        }
+
+      }
+
+      & img {
+        width: 90%;
+
+        @include ta {
+          width: 100%;
+        }
+      }
+
+    }
+
+    &-textBox {
+      width: 60%;
+      background-color: #f5e1dc;
+      padding: 30px 60px;
+
+      @include ta {
+        padding: 0;
+        width: 100%;
+      }
+
+      &-title {
+        text-align: center;
+        font-size: 2rem;
+        margin: 20px 0;
+
+        @include ta {
+
+          &::before {
+            content: "Total course";
+            position: absolute;
+            scale: (2);
+            font-family: "Allura";
+            letter-spacing: 0.03em;
+            color: #f47a7a;
+            font-weight: 500;
+            transform: rotate(-10deg);
+            font-size: 1.2rem;
+            left: 20%;
+          }
+        }
+
+
+      }
+
+      &-menuList {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin: 10px 0;
+
+        @include ta {
+          flex-wrap: wrap;
+
+        }
+
+        
+        & li {
+          background-color: #fff;
+          min-width: 40px;
+          text-align: center;
+          padding: 20px 30px;
+          border-radius: 50px;
+
+          @include ta {
+            padding: 10px;
+            max-width: 80%;
+            margin: 5px auto;
+
+          }
+
+  
+
+          &:not(:first-child) {
+            margin-left: 10px;
+
+            @include ta {
+              margin: 5px auto;
+              padding: 10px;
+              max-width: 80%;
+              margin: 5px auto;
+            }
+          }
+        }
+      }
+
+      &-lead {
+        display: flex;
+        margin: 30px;
+        align-items: flex-end;
+        letter-spacing: 0.2em;
+
+        @include ta {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        &-price {
+          font-size: 3rem;
+          font-weight: normal;
+
+          @include ta {
+            font-size: 2rem;
+          }
+
+          & span {
+            font-size: 1.5rem;
+
+            @include ta {
+              font-size: 1rem;
+            }
+          }
+        }
+
+        &-time {
+          font-size: 1.5rem;
+          margin-left: 100px;
+
+          @include ta {
+            margin:  0 auto;
+          }
+
+
+          & span {
+            font-size: 2rem;
+          }
+        }
+
+      }
+      &-explain {
+        margin: 30px;
+        line-height: 1.5rem;
+      }
+
+      &-btn {
+        margin: 20px auto;
+      }
+    }
+  }
+}
+
+
+/* --- シンデレラコース ---------------------------------------- */
+#cinderellaCourse {
+  margin-top: 50px;
+  padding: 50px 0;
+  background-color: #fff;
+
+
+  .cinderellaCourse-inner {
+    display: flex;
+    justify-content: space-between;
+
+    &-imgBox {
+      width: 35%;
+      position: relative;
+
+      &::after {
+        content: "Cinderella course";
+        position: absolute;
+        top: 6%;
+        left: 25%;
+        scale: (3);
+        font-family: "Allura";
+        letter-spacing: 0.03em;
+        color: #f47a7a;
+        font-weight: 500;
+        transform: rotate(-10deg);
+        font-size: 1.2rem;
+      }
+
+      & img {
+        width: 90%;
+      }
+
+    }
+
+    &-textBox {
+      width: 60%;
+      background-color: #f5e1dc;
+      padding: 20px 40px;
+
+      &-title {
+        text-align: center;
+        font-size: 2rem;
+        margin: 10px 0;
+      }
+      &-menuList1 {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin: 10px 0;
+        
+        & li {
+          background-color: #fff;
+          min-width: 30px;
+          text-align: center;
+          padding: 20px 40px;
+          border-radius: 50px;
+
+
+          &:not(:first-child) {
+            margin-left: 30px;
+          }
+        }
+      }
+
+      &-menuList2 {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin: 10px 0;
+        
+        & li {
+          background-color: #fff;
+          min-width: 100px;
+          text-align: center;
+          padding: 20px 40px;
+          border-radius: 50px;
+
+
+          &:not(:first-child) {
+            margin-left: 30px;
+          }
+        }
+      }
+      &-lead {
+        display: flex;
+        align-items: flex-end;
+        margin: 30px 0;
+        letter-spacing: 0.2em;
+
+
+        &-price {
+          font-size: 2.5rem;
+          font-weight: normal;
+
+          & span {
+            font-size: 1.5rem;
+          }
+        }
+
+        &-time {
+          font-size: 1.5rem;
+          margin-left: 10px;
+
+
+          & span {
+            font-size: 2rem;
+          }
+        }
+
+      }
+      &-explain {
+        margin: 30px;
+        line-height: 1.5rem;
+      }
+
+      &-btn {
+        margin: 10px auto;
+      }
+
+
+
+
+    }
+
+  }
+}
+
+/* --- ミニコース ---------------------------------------- */
+
+#miniCourse {
+
+  background-color: #fff;
+  padding: 50px;
+  
+  .miniCourse-inner {
+    margin: 50px 0 ;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+
+    &-textBox {
+      width: 45%;
+      background-color: #f5e1dc;
+      padding: 20px;
+
+      &-title {
+        text-align: center;
+        font-size: 1.5rem;
+        margin: 20px 0;
+      }
+      &-menuList {
+
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin: 10px 0;
+        
+        & li {
+          background-color: #fff;
+          min-width: 100px;
+          text-align: center;
+          padding: 20px;
+          border-radius: 50px;
+          font-size: 0.8rem;
+
+
+          &:not(:first-child) {
+            margin-left: 15px;
+          }
+        }
+        
+      }
+
+
+      &-lead {
+        display: flex;
+        margin: 30px;
+        align-items: flex-end;
+        letter-spacing: 0.2em;
+
+
+
+        &-price {
+          font-size: 2rem;
+          font-weight: normal;
+
+          & span {
+            font-size: 1rem;
+          }
+        }
+
+        &-time {
+
+          margin-left: 50px;
+
+          & span {
+            font-size: 1.5rem;
+          }
+        }
+
+      }
+      &-explain {
+        margin: 30px;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+      }
+
+      &-btn {
+        margin: 20px auto;
+      }
+    }
+  }
+}
+/* --- 16タイプパーソナルカラーコース ---------------------------------------- */
+
+#typesCourse {
+  margin-top: 50px;
+
+  .typesCourse-inner {
+    display: flex;
+    justify-content: space-between;
+
+    &-imgBox {
+      width: 35%;
+      position: relative;
+
+      &::after {
+        content: "16types personal color course";
+        position: absolute;
+        top: 0%;
+        left: 25%;
+        scale: (3);
+        font-family: "Allura";
+        letter-spacing: 0.03em;
+        color: #f47a7a;
+        font-weight: 500;
+        transform: rotate(-10deg);
+        font-size: 0.9rem;
+      }
+
+      & img {
+        width: 90%;
+      }
+
+    }
+
+    &-textBox {
+      width: 60%;
+      background-color: #f5e1dc;
+      padding: 30px 60px;
+
+      &-title {
+        text-align: center;
+        font-size: 2rem;
+        margin: 10px 0;
+      }
+      &-menuList {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+
+        
+        & li {
+          background-color: #fff;
+          min-width: 100px;
+          text-align: center;
+          padding: 20px;
+          border-radius: 50px;
+
+          &:not(:first-child) {
+            margin-left: 30px;
+          }
+        }
+      }
+      &-lead {
+        display: flex;
+        margin: 30px;
+        align-items: flex-end;
+        letter-spacing: 0.2em;
+
+        &-price {
+          font-size: 3rem;
+          font-weight: normal;
+
+          & span {
+            font-size: 1.5rem;
+          }
+        }
+
+        &-time {
+          font-size: 1.5rem;
+          margin-left: 100px;
+
+
+          & span {
+            font-size: 2rem;
+          }
+        }
+
+      }
+      &-explain {
+        margin: 30px;
+        line-height: 1.5rem;
+      }
+
+      &-btn {
+        margin: 0px auto;
+      }
+    }
+  }
+}
+/* --- 顔タイプ診断コース ---------------------------------------- */
+
+#faceCourse {
+  margin-top: 50px;
+  padding: 50px 0;
+  background-color: #fff;
+
+  .faceCourse-inner {
+    display: flex;
+    justify-content: space-between;
+
+    &-imgBox {
+      width: 35%;
+      position: relative;
+
+      &::after {
+        content: "Face type course";
+        position: absolute;
+        top: 0%;
+        left: 25%;
+        scale: (3);
+        font-family: "Allura";
+        letter-spacing: 0.03em;
+        color: #f47a7a;
+        font-weight: 500;
+        transform: rotate(-10deg);
+        font-size: 0.9rem;
+      }
+
+      & img {
+        width: 90%;
+      }
+
+    }
+
+    &-textBox {
+      width: 60%;
+      background-color: #f5e1dc;
+      padding: 20px 30px;
+
+      &-title {
+        text-align: center;
+        font-size: 2rem;
+        margin: 10px 0;
+      }
+      &-menuList {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+
+        
+        & li {
+          background-color: #fff;
+          min-width: 100px;
+          text-align: center;
+          padding: 20px;
+          border-radius: 50px;
+
+          &:not(:first-child) {
+            margin-left: 30px;
+          }
+        }
+      }
+      &-lead {
+        display: flex;
+        margin: 20px;
+        align-items: flex-end;
+        letter-spacing: 0.2em;
+
+        &-price {
+          font-size: 3rem;
+          font-weight: normal;
+
+          & span {
+            font-size: 1.5rem;
+          }
+        }
+
+        &-time {
+          font-size: 1.5rem;
+          margin-left: 100px;
+
+
+          & span {
+            font-size: 2rem;
+          }
+        }
+
+      }
+      &-explain {
+        margin: 30px;
+        line-height: 1.5rem;
+      }
+
+      &-btn {
+        margin: 0px auto;
+      }
+    }
+  }
+}
+
+/* --- 自分型骨格診断コース ---------------------------------------- */
+
+#frameCourse {
+  margin-top: 50px;
+  padding: 40px 0;
+
+
+  .frameCourse-inner {
+    display: flex;
+    justify-content: space-between;
+
+    &-imgBox {
+      width: 35%;
+      position: relative;
+
+      &::after {
+        content: "Personal frame type course";
+        position: absolute;
+        top: 0%;
+        left: 25%;
+        scale: (3);
+        font-family: "Allura";
+        letter-spacing: 0.03em;
+        color: #f47a7a;
+        font-weight: 500;
+        transform: rotate(-10deg);
+        font-size: 0.9rem;
+      }
+
+      & img {
+        width: 90%;
+      }
+
+    }
+
+    &-textBox {
+      width: 60%;
+      background-color: #f5e1dc;
+      padding: 20px 60px;
+
+      &-title {
+        text-align: center;
+        font-size: 2rem;
+        margin: 10px 0;
+      }
+      &-menuList {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+
+        
+        & li {
+          background-color: #fff;
+          min-width: 100px;
+          text-align: center;
+          padding: 20px;
+          border-radius: 50px;
+
+          &:not(:first-child) {
+            margin-left: 30px;
+          }
+        }
+      }
+      &-lead {
+        display: flex;
+        margin: 30px;
+        align-items: flex-end;
+        letter-spacing: 0.2em;
+
+        &-price {
+          font-size: 3rem;
+          font-weight: normal;
+
+          & span {
+            font-size: 1.5rem;
+          }
+        }
+
+        &-time {
+          font-size: 1.5rem;
+          margin-left: 100px;
+
+
+          & span {
+            font-size: 2rem;
+          }
+        }
+
+      }
+      &-explain {
+        margin: 30px;
+        line-height: 1.5rem;
+      }
+
+      &-btn {
+        margin: 0px auto;
+      }
+    }
+  }
+}
+/* --- オンラインコース ---------------------------------------- */
+
+#onlineCourse {
+  margin-top: 50px;
+  padding: 50px 0;
+  background-color: #fff;
+
+  .onlineCourse-inner {
+
+ 
+    
+    &-textBox {
+      width: 90%;
+      background-color: #f5e1dc;
+      padding: 30px 60px;
+
+      &-title {
+        text-align: center;
+        font-size: 2rem;
+        margin: 10px 0;
+      }
+
+      &-explain {
+        margin: 30px;
+        line-height: 1.5rem;
+        text-align: center;
+      }
+
+      &-btn {
+        margin: 0px auto;
+      }
+    }
+  }
+}
+
+
+
+// ご予約 ーーーーーーーーーーーーーーーーーーーーーーー
+
+
+
+/* --- 全体のBOX定義 ---------------------------------------- */
+.box-top-bg-img {
+  position   : relative;
+  width  : 100%;
+  height     : 100vh;
+  margin     : auto;
+  overflow   : hidden;
+
+  /* --- 背景の指定 ------------------------------------------- */
+  .bgImgNoAnime {
+    background-size: cover;
+    position   : absolute;
+    top        : 0;
+    left       : 0;
+    bottom     : 0;
+    right      : 0;
+  }
+
+  .reservation-top {
+    background-image: url(../images/5_reservation/reservation1.jpg);
+    
+    &-inner{
+      position: relative;
+      padding: 50vh 0;
+      
+      &-box {
+
+
+        &-title {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 80%;
+          text-align: center;
+          letter-spacing: 0.24em;
+          line-height: 3rem;
+          font-family: "Damion";
+          font-size: 1.2rem;
+          font-weight: normal;
+
+          & span {
+            font-size: 3rem;
+          }
+
+        }
+      }
+
+      &-lead {
+        position: absolute;
+        font-size: 1.5rem;
+        padding-left: 4rem;
+        text-indent: -4rem;
+        left: 20%;
+        line-height: 3rem;
+        
+        span {
+          font-size: 2rem;
+          margin: 0 0.5rem;
+
+        }
+      }
+    }
+  }
+}
+
+#reservation {
+  .reservation-inner {
+    text-align: center;
+
+    &-lead {
+      line-height: 2rem;
+    }
+
+    &-imgBox {
+      margin: 40px 0;
+
+      & img {
+        width: 20%;
+      }
+    }
+    &-link {
+      margin: 40px 0;
+    }
+
+    &-explain {
+      line-height: 2rem;
+      margin: 40px 0 80px 0;
+    }
+
+  }
+
+}
+
+
+
+
 
 footer {
 
-/*リンクの形状*/
-#page-top a{
-	display: flex;
-	justify-content:center;
-	align-items:center;
-	background:#942D2F;
-	border-radius: 5px;
-	width: 60px;
-	height: 60px;
-	color: #fff;
-	text-align: center;
-	text-transform: uppercase; 
-	text-decoration: none;
-	font-size:0.6rem;
-	transition:all 0.3s;
+  /*リンクの形状*/
+  // #page-top a{
+  // 	display: flex;
+  // 	justify-content:center;
+  // 	align-items:center;
+  // 	background:#942D2F;
+  // 	border-radius: 5px;
+  // 	width: 60px;
+  // 	height: 60px;
+  // 	color: #fff;
+  // 	text-align: center;
+  // 	text-transform: uppercase; 
+  // 	text-decoration: none;
+  // 	font-size:0.6rem;
+  // 	transition:all 0.3s;
 
-  & a:hover{
-    background: #777;
-  }
-}
-
-
-/*リンクを右下に固定*/
-#page-top {
-	position: fixed;
-	right: 10px;
-	bottom:10px;
-	z-index: 2;
-    /*はじめは非表示*/
-	opacity: 0;
-	transform: translateX(100px);
-  
-
-  /*　左の動き　*/
-  &.LeftMove{
-    animation: LeftAnime 0.5s forwards;
-  }
-  
-  @keyframes LeftAnime{
-    from {
-      opacity: 0;
-    transform: translateX(100px);
-    }
-    to {
-      opacity: 1;
-    transform: translateX(0);
-    }
-  }
-  
-  /*　右の動き　*/
-  &.RightMove{
-    animation: RightAnime 0.5s forwards;
-  }
-  @keyframes RightAnime{
-    from {
-      opacity: 1;
-    transform: translateX(0);
-    }
-    to {
-      opacity: 1;
-    transform: translateX(100px);
-    }
-  }
-}
+  //   & a:hover{
+  //     background: #777;
+  //   }
+  // }
 
 
+  /*リンクを右下に固定*/
+  // #page-top {
+  // 	position: fixed;
+  // 	right: 10px;
+  // 	bottom:10px;
+  // 	z-index: 2;
+  //     /*はじめは非表示*/
+  // 	opacity: 0;
+  // 	transform: translateX(100px);
 
 
+  //   /*　左の動き　*/
+  //   &.LeftMove{
+  //     animation: LeftAnime 0.5s forwards;
+  //   }
 
+  //   @keyframes LeftAnime{
+  //     from {
+  //       opacity: 0;
+  //     transform: translateX(100px);
+  //     }
+  //     to {
+  //       opacity: 1;
+  //     transform: translateX(0);
+  //     }
+  //   }
+
+  //   /*　右の動き　*/
+  //   &.RightMove{
+  //     animation: RightAnime 0.5s forwards;
+  //   }
+  //   @keyframes RightAnime{
+  //     from {
+  //       opacity: 1;
+  //     transform: translateX(0);
+  //     }
+  //     to {
+  //       opacity: 1;
+  //     transform: translateX(100px);
+  //     }
+  //   }
+  // }
 
   .footer-nav {
     ul {
@@ -2073,15 +3146,13 @@ footer {
               line-height: 20px;
               text-align: center;
             }
-          }
         }
+      }
+    }
+    p {
+      line-height: 1.5rem;
+      background-color: #e6c4b3;
+      text-align: center;
     }
   }
-  p {
-    line-height: 1.5rem;
-    background-color: #e6c4b3;
-    text-align: center;
-  }
-
-
 }

@@ -2,6 +2,9 @@
 html {
   font-size: 16px;
   font-family: fot-tsukuardgothic-std, sans-serif;
+  font-family: "Allura", cursive;
+  font-family: "Damion", cursive;
+  font-family: "Zen Maru Gothic", sans-serif;
   color: #442508;
   background-color: #fdefe9;
 }
@@ -31,8 +34,11 @@ a {
   text-align: center;
 }
 .sec-title h2 {
-  font-size: 1.7rem;
+  font-size: 2.5rem;
+  letter-spacing: 0.12em;
   padding: 10px;
+  font-family: "Damion";
+  font-weight: normal;
 }
 
 .btn {
@@ -86,7 +92,7 @@ a {
     position: fixed;
     z-index: 9999; /*ボタンを最前面に*/
     top: 10px;
-    left: 10px;
+    right: 10px;
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -335,10 +341,15 @@ a {
   }
 }
 #menu .menu-boxes .menu-box img {
-  height: 280px;
+  height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 30px;
+}
+@media (max-width: 564px) {
+  #menu .menu-boxes .menu-box img {
+    max-height: 150px;
+  }
 }
 #menu .menu-boxes .menu-box .menu-box-background {
   background-color: #FEF4F2;
@@ -351,7 +362,7 @@ a {
   width: 80%;
   text-align: center;
   border-radius: 50px;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.2em;
 }
 #menu .menu-boxes .menu-box .menu-text {
   position: absolute;
@@ -360,7 +371,7 @@ a {
   transform: translate(-50%, -50%);
   width: 80%;
   text-align: center;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.2em;
 }
 
 #reservation {
@@ -384,11 +395,15 @@ a {
 }
 #reservation .reservation-boxes .reservation-box {
   position: relative;
-  padding: 0.5em 1em;
   border: solid 5px #e6c4b3; /*線*/
   border-radius: 20px; /*角の丸み*/
   margin-top: 6%;
-  height: 200px;
+  width: 100%;
+}
+#reservation .reservation-boxes .reservation-box::before {
+  content: "";
+  padding-top: 100%;
+  display: block;
 }
 @media (max-width: 564px) {
   #reservation .reservation-boxes .reservation-box {
@@ -421,7 +436,7 @@ a {
 #reservation .reservation-boxes .reservation-box:nth-child(8) {
   border: solid 5px #e6c4b3; /*線*/
 }
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
   #reservation .reservation-boxes .reservation-box:nth-child(2) {
     background-color: #f1d9ce;
     border: solid 5px #f1d9ce; /*線*/
@@ -461,18 +476,48 @@ a {
   left: -25px;
 }
 #reservation .reservation-boxes .reservation-box-title {
+  position: absolute;
+  top: 15%;
   color: #f47a7a;
-  text-align: center;
-  margin: 30px 0 15px;
   letter-spacing: 0.12em;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
 }
 #reservation .reservation-boxes .reservation-box-text {
-  padding: 0 10px;
+  position: absolute;
+  top: 30%;
+  padding: 10px 30px;
   line-height: 1.5rem;
 }
 
 #voice {
   margin-top: 90px;
+}
+#voice .voice-box .voice-info {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 80%;
+  line-height: 1.5rem;
+  letter-spacing: 0.12em;
+}
+@media (max-width: 768px) {
+  #voice .voice-box .voice-info {
+    top: 10%;
+    font-size: 0.9rem;
+    line-height: 1rem;
+  }
+}
+#voice .voice-box .voice-person {
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  width: 70%;
+  line-height: 1.5rem;
+  letter-spacing: 0.24em;
+  text-align: right;
 }
 
 /*==================================================
@@ -480,15 +525,15 @@ a {
 ===================================*/
 .slider { /*横幅94%で左右に余白を持たせて中央寄せ*/
   width: 94%;
-  margin: 0 auto;
+  margin: 20px auto;
 }
-.slider img {
-  width: 40vw; /*スライダー内の画像を60vwにしてレスポンシブ化*/
-  height: auto;
+.slider .slider-wrap {
+  position: relative;
+  max-width: 40vw; /*スライダー内の画像を60vwにしてレスポンシブ化*/
 }
 @media (max-width: 564px) {
-  .slider img {
-    width: 60vw;
+  .slider .slider-wrap {
+    max-width: 60vw;
   }
 }
 .slider .slick-slide {
@@ -533,6 +578,7 @@ a {
 .slick-dots li {
   display: inline-block;
   margin: 0 5px;
+  display: none;
 }
 .slick-dots button {
   color: transparent;
@@ -607,6 +653,7 @@ a {
   background: #f3f3f3;
   margin: 0 3% 3% 3%;
   padding: 3%;
+  border-radius: 30px;
 }
 #faq .accordion-area section .box p {
   letter-spacing: 0.12em;
@@ -686,6 +733,7 @@ a {
   text-indent: -4rem;
   left: 20%;
   line-height: 3rem;
+  font-family: "Hannari";
 }
 .box-top-bg-img .profile-top-inner-lead span {
   font-size: 2rem;
@@ -704,15 +752,35 @@ a {
   padding: 10px 100px;
   background-color: #F3E3DA;
 }
+@media (max-width: 768px) {
+  #archivement-profile .archivement-profile-info .slider-info {
+    height: 60vh;
+  }
+}
 #archivement-profile .archivement-profile-info .slider-info .slider-info-title {
   text-align: center;
   font-size: 1.3rem;
   margin-top: 40px;
 }
+@media (max-width: 768px) {
+  #archivement-profile .archivement-profile-info .slider-info .slider-info-title {
+    width: 80vw;
+    margin: 0 auto;
+    line-height: 2rem;
+    padding: 10px;
+  }
+}
 #archivement-profile .archivement-profile-info .slider-info .slider-info-text {
   margin-top: 30px;
   line-height: 2.5;
   margin-left: 30px;
+}
+@media (max-width: 768px) {
+  #archivement-profile .archivement-profile-info .slider-info .slider-info-text {
+    width: 80vw;
+    margin: 10px auto;
+    line-height: 2rem;
+  }
 }
 
 #certification {
@@ -767,9 +835,24 @@ a {
 #archivement .archivement-info .archivement-table td {
   padding: 30px 0;
 }
+@media (max-width: 768px) {
+  #archivement .archivement-info .archivement-table td {
+    padding: 10px;
+    display: block;
+    text-align: center;
+    padding: 15px 40px;
+  }
+}
 #archivement .archivement-info .archivement-table .archivement-table-client p {
   margin-right: 60px;
   text-align: right;
+}
+@media (max-width: 768px) {
+  #archivement .archivement-info .archivement-table .archivement-table-client p {
+    margin: 0;
+    text-align: center;
+    text-decoration: underline;
+  }
 }
 #archivement .archivement-info .archivement-info-more {
   margin-bottom: 100px;
@@ -818,6 +901,24 @@ a {
   margin: 0 30px;
   width: 100px;
 }
+@media (max-width: 768px) {
+  #contact .contact-icons .contact-icons-link img {
+    margin: 0;
+  }
+}
+
+.menu-title {
+  font-size: 1.8rem;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  line-height: 3rem;
+  font-family: "Allura";
+}
 
 /* --- 全体のBOX定義 ---------------------------------------- */
 .box-top-bg-img {
@@ -856,13 +957,18 @@ a {
   border-radius: 50px;
   letter-spacing: 0.24em;
 }
+@media (max-width: 768px) {
+  .box-top-bg-img .p-color-top-inner-box-background {
+    width: 80%;
+  }
+}
 .box-top-bg-img .p-color-top-inner-box-title {
   position: absolute;
-  top: 50%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
   text-align: center;
+  width: 80%;
   letter-spacing: 0.24em;
   line-height: 3rem;
 }
@@ -896,6 +1002,20 @@ a {
   text-align: center;
   font-size: 1.5rem;
   padding: 30px;
+  position: relative;
+}
+#p-color-explain .p-color-explain-inner-textBox-title::before {
+  content: "Personal Color";
+  position: absolute;
+  top: 0%;
+  left: 25%;
+  scale: 3;
+  font-family: "Allura";
+  letter-spacing: 0.03em;
+  color: #f47a7a;
+  font-weight: 500;
+  transform: rotate(-10deg);
+  font-size: 1.2rem;
 }
 #p-color-explain .p-color-explain-inner-textBox-text {
   margin-top: 30px;
@@ -910,11 +1030,11 @@ a {
 }
 #p-color-explain .p-color-explain-inner::after {
   content: " ";
-  width: 80%;
+  min-width: 80%;
   height: 110%;
   padding: 30px;
   top: -10%;
-  right: 0px;
+  right: 0%;
   position: absolute;
   background-color: #F3E3DA;
   z-index: -1;
@@ -926,8 +1046,6 @@ a {
   position: relative;
   width: 100%;
   height: 100%;
-  max-width: 1600px;
-  max-height: 800px;
 }
 #types-color-explain .types-color-explain-inner {
   display: flex;
@@ -943,14 +1061,28 @@ a {
   font-size: 1.5rem;
   padding: 30px;
 }
+#types-color-explain .types-color-explain-inner-textBox-title::before {
+  content: "16types \aPersonal Color";
+  white-space: pre;
+  position: absolute;
+  top: -10%;
+  right: 20%;
+  scale: 3;
+  font-family: "Allura";
+  letter-spacing: 0.03em;
+  color: #f47a7a;
+  font-weight: 500;
+  transform: rotate(10deg);
+  font-size: 1.2rem;
+}
 #types-color-explain .types-color-explain-inner-textBox-text {
   font-size: 1.25rem;
   padding: 0 10%;
-  margin-top: 30px;
+  margin-top: 60px;
   line-height: 2rem;
 }
 #types-color-explain .types-color-explain-inner-imgBox {
-  width: 40%;
+  width: 35%;
 }
 #types-color-explain .types-color-explain-inner-imgBox img {
   box-shadow: -20px 25px #EFCBC3;
@@ -959,7 +1091,7 @@ a {
   width: 300px;
   position: absolute;
   right: 100px;
-  bottom: -100px;
+  bottom: -40%;
   z-index: -1;
 }
 #types-color-explain .types-color-explain-inner::after {
@@ -968,10 +1100,10 @@ a {
   height: 110%;
   padding: 30px;
   top: -10%;
-  left: 0px;
+  left: -4%;
   position: absolute;
   background-color: #F3E3DA;
-  z-index: -1;
+  z-index: -2;
 }
 
 #p-color-flow {
@@ -1012,7 +1144,7 @@ a {
 #p-color-flow .flow-box .flow-box-img-step1 img {
   position: absolute;
   width: 50%;
-  top: 10%;
+  top: 20%;
   right: -15%;
   z-index: 1;
 }
@@ -1110,7 +1242,7 @@ a {
 }
 .box-top-bg-img .f-type-top-inner-box-title {
   position: absolute;
-  top: 50%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
@@ -1148,6 +1280,20 @@ a {
   text-align: center;
   font-size: 1.5rem;
   padding: 80px 30px;
+  position: relative;
+}
+#f-type-explain .f-type-explain-inner-textBox-title::before {
+  content: "Face Type";
+  position: absolute;
+  top: 0%;
+  left: 15%;
+  scale: 3;
+  font-family: "Allura";
+  letter-spacing: 0.03em;
+  color: #f47a7a;
+  font-weight: 500;
+  transform: rotate(-10deg);
+  font-size: 1.2rem;
 }
 #f-type-explain .f-type-explain-inner-textBox-text {
   margin-top: 30px;
@@ -1308,7 +1454,7 @@ a {
 }
 .box-top-bg-img .frame-type-top-inner-box-title {
   position: absolute;
-  top: 50%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
@@ -1346,6 +1492,20 @@ a {
   text-align: center;
   font-size: 1.5rem;
   padding: 30px;
+  position: relative;
+}
+#frame-type-explain .frame-type-explain-inner-textBox-title::before {
+  content: "Frame Type";
+  position: absolute;
+  top: -30%;
+  left: 25%;
+  scale: 3;
+  font-family: "Allura";
+  letter-spacing: 0.03em;
+  color: #f47a7a;
+  font-weight: 500;
+  transform: rotate(-10deg);
+  font-size: 1.2rem;
 }
 #frame-type-explain .frame-type-explain-inner-textBox-text {
   margin-top: 30px;
@@ -1392,6 +1552,20 @@ a {
   text-align: center;
   font-size: 1.5rem;
   padding: 30px;
+  position: relative;
+}
+#self-frame-type-explain .self-frame-type-explain-inner-textBox-title::before {
+  content: "Personal Frame Type";
+  position: absolute;
+  top: -10%;
+  right: 20%;
+  scale: 3;
+  font-family: "Allura";
+  letter-spacing: 0.03em;
+  color: #f47a7a;
+  font-weight: 500;
+  transform: rotate(10deg);
+  font-size: 1.2rem;
 }
 #self-frame-type-explain .self-frame-type-explain-inner-textBox-text {
   font-size: 1.25rem;
@@ -1526,64 +1700,736 @@ a {
   transform: scale(0.8);
 }
 
+/* --- 全体のBOX定義 ---------------------------------------- */
+.box-top-bg-img {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  overflow: hidden;
+  /* --- 背景の指定 ------------------------------------------- */
+}
+.box-top-bg-img .bgImgNoAnime {
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.box-top-bg-img .menu-top {
+  background-image: url(../images/4_menu/menu_top.jpg);
+}
+.box-top-bg-img .menu-top-inner {
+  position: relative;
+  padding: 50vh 0;
+}
+.box-top-bg-img .menu-top-inner-box-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  line-height: 3rem;
+  font-family: "Damion";
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+.box-top-bg-img .menu-top-inner-box-title span {
+  font-size: 3rem;
+}
+.box-top-bg-img .menu-top-inner-lead {
+  position: absolute;
+  font-size: 1.5rem;
+  padding-left: 4rem;
+  text-indent: -4rem;
+  left: 20%;
+  line-height: 3rem;
+}
+.box-top-bg-img .menu-top-inner-lead span {
+  font-size: 2rem;
+  margin: 0 0.5rem;
+}
+
+/* --- トータルコース ---------------------------------------- */
+#totalCourse {
+  margin-top: 50px;
+}
+#totalCourse .totalCourse-inner {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  #totalCourse .totalCourse-inner {
+    flex-direction: column;
+  }
+}
+#totalCourse .totalCourse-inner-imgBox {
+  width: 35%;
+  position: relative;
+}
+@media (max-width: 768px) {
+  #totalCourse .totalCourse-inner-imgBox {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+#totalCourse .totalCourse-inner-imgBox::after {
+  content: "Total course";
+  position: absolute;
+  top: 0%;
+  left: 25%;
+  scale: 3;
+  font-family: "Allura";
+  letter-spacing: 0.03em;
+  color: #f47a7a;
+  font-weight: 500;
+  transform: rotate(-10deg);
+  font-size: 1.2rem;
+}
+@media (max-width: 768px) {
+  #totalCourse .totalCourse-inner-imgBox::after {
+    content: none;
+  }
+}
+#totalCourse .totalCourse-inner-imgBox img {
+  width: 90%;
+}
+@media (max-width: 768px) {
+  #totalCourse .totalCourse-inner-imgBox img {
+    width: 100%;
+  }
+}
+#totalCourse .totalCourse-inner-textBox {
+  width: 60%;
+  background-color: #f5e1dc;
+  padding: 30px 60px;
+}
+@media (max-width: 768px) {
+  #totalCourse .totalCourse-inner-textBox {
+    padding: 0;
+    width: 100%;
+  }
+}
+#totalCourse .totalCourse-inner-textBox-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 20px 0;
+}
+@media (max-width: 768px) {
+  #totalCourse .totalCourse-inner-textBox-title::before {
+    content: "Total course";
+    position: absolute;
+    scale: 2;
+    font-family: "Allura";
+    letter-spacing: 0.03em;
+    color: #f47a7a;
+    font-weight: 500;
+    transform: rotate(-10deg);
+    font-size: 1.2rem;
+    left: 20%;
+  }
+}
+#totalCourse .totalCourse-inner-textBox-menuList {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 10px 0;
+}
+@media (max-width: 768px) {
+  #totalCourse .totalCourse-inner-textBox-menuList {
+    flex-wrap: wrap;
+  }
+}
+#totalCourse .totalCourse-inner-textBox-menuList li {
+  background-color: #fff;
+  min-width: 40px;
+  text-align: center;
+  padding: 20px 30px;
+  border-radius: 50px;
+}
+@media (max-width: 768px) {
+  #totalCourse .totalCourse-inner-textBox-menuList li {
+    padding: 10px;
+    max-width: 80%;
+    margin: 5px auto;
+  }
+}
+#totalCourse .totalCourse-inner-textBox-menuList li:not(:first-child) {
+  margin-left: 10px;
+}
+@media (max-width: 768px) {
+  #totalCourse .totalCourse-inner-textBox-menuList li:not(:first-child) {
+    margin: 5px auto;
+    padding: 10px;
+    max-width: 80%;
+    margin: 5px auto;
+  }
+}
+#totalCourse .totalCourse-inner-textBox-lead {
+  display: flex;
+  margin: 30px;
+  align-items: flex-end;
+  letter-spacing: 0.2em;
+}
+@media (max-width: 768px) {
+  #totalCourse .totalCourse-inner-textBox-lead {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+#totalCourse .totalCourse-inner-textBox-lead-price {
+  font-size: 3rem;
+  font-weight: normal;
+}
+@media (max-width: 768px) {
+  #totalCourse .totalCourse-inner-textBox-lead-price {
+    font-size: 2rem;
+  }
+}
+#totalCourse .totalCourse-inner-textBox-lead-price span {
+  font-size: 1.5rem;
+}
+@media (max-width: 768px) {
+  #totalCourse .totalCourse-inner-textBox-lead-price span {
+    font-size: 1rem;
+  }
+}
+#totalCourse .totalCourse-inner-textBox-lead-time {
+  font-size: 1.5rem;
+  margin-left: 100px;
+}
+@media (max-width: 768px) {
+  #totalCourse .totalCourse-inner-textBox-lead-time {
+    margin: 0 auto;
+  }
+}
+#totalCourse .totalCourse-inner-textBox-lead-time span {
+  font-size: 2rem;
+}
+#totalCourse .totalCourse-inner-textBox-explain {
+  margin: 30px;
+  line-height: 1.5rem;
+}
+#totalCourse .totalCourse-inner-textBox-btn {
+  margin: 20px auto;
+}
+
+/* --- シンデレラコース ---------------------------------------- */
+#cinderellaCourse {
+  margin-top: 50px;
+  padding: 50px 0;
+  background-color: #fff;
+}
+#cinderellaCourse .cinderellaCourse-inner {
+  display: flex;
+  justify-content: space-between;
+}
+#cinderellaCourse .cinderellaCourse-inner-imgBox {
+  width: 35%;
+  position: relative;
+}
+#cinderellaCourse .cinderellaCourse-inner-imgBox::after {
+  content: "Cinderella course";
+  position: absolute;
+  top: 6%;
+  left: 25%;
+  scale: 3;
+  font-family: "Allura";
+  letter-spacing: 0.03em;
+  color: #f47a7a;
+  font-weight: 500;
+  transform: rotate(-10deg);
+  font-size: 1.2rem;
+}
+#cinderellaCourse .cinderellaCourse-inner-imgBox img {
+  width: 90%;
+}
+#cinderellaCourse .cinderellaCourse-inner-textBox {
+  width: 60%;
+  background-color: #f5e1dc;
+  padding: 20px 40px;
+}
+#cinderellaCourse .cinderellaCourse-inner-textBox-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 10px 0;
+}
+#cinderellaCourse .cinderellaCourse-inner-textBox-menuList1 {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 10px 0;
+}
+#cinderellaCourse .cinderellaCourse-inner-textBox-menuList1 li {
+  background-color: #fff;
+  min-width: 30px;
+  text-align: center;
+  padding: 20px 40px;
+  border-radius: 50px;
+}
+#cinderellaCourse .cinderellaCourse-inner-textBox-menuList1 li:not(:first-child) {
+  margin-left: 30px;
+}
+#cinderellaCourse .cinderellaCourse-inner-textBox-menuList2 {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 10px 0;
+}
+#cinderellaCourse .cinderellaCourse-inner-textBox-menuList2 li {
+  background-color: #fff;
+  min-width: 100px;
+  text-align: center;
+  padding: 20px 40px;
+  border-radius: 50px;
+}
+#cinderellaCourse .cinderellaCourse-inner-textBox-menuList2 li:not(:first-child) {
+  margin-left: 30px;
+}
+#cinderellaCourse .cinderellaCourse-inner-textBox-lead {
+  display: flex;
+  align-items: flex-end;
+  margin: 30px 0;
+  letter-spacing: 0.2em;
+}
+#cinderellaCourse .cinderellaCourse-inner-textBox-lead-price {
+  font-size: 2.5rem;
+  font-weight: normal;
+}
+#cinderellaCourse .cinderellaCourse-inner-textBox-lead-price span {
+  font-size: 1.5rem;
+}
+#cinderellaCourse .cinderellaCourse-inner-textBox-lead-time {
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+#cinderellaCourse .cinderellaCourse-inner-textBox-lead-time span {
+  font-size: 2rem;
+}
+#cinderellaCourse .cinderellaCourse-inner-textBox-explain {
+  margin: 30px;
+  line-height: 1.5rem;
+}
+#cinderellaCourse .cinderellaCourse-inner-textBox-btn {
+  margin: 10px auto;
+}
+
+/* --- ミニコース ---------------------------------------- */
+#miniCourse {
+  background-color: #fff;
+  padding: 50px;
+}
+#miniCourse .miniCourse-inner {
+  margin: 50px 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+#miniCourse .miniCourse-inner-textBox {
+  width: 45%;
+  background-color: #f5e1dc;
+  padding: 20px;
+}
+#miniCourse .miniCourse-inner-textBox-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+#miniCourse .miniCourse-inner-textBox-menuList {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 10px 0;
+}
+#miniCourse .miniCourse-inner-textBox-menuList li {
+  background-color: #fff;
+  min-width: 100px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+}
+#miniCourse .miniCourse-inner-textBox-menuList li:not(:first-child) {
+  margin-left: 15px;
+}
+#miniCourse .miniCourse-inner-textBox-lead {
+  display: flex;
+  margin: 30px;
+  align-items: flex-end;
+  letter-spacing: 0.2em;
+}
+#miniCourse .miniCourse-inner-textBox-lead-price {
+  font-size: 2rem;
+  font-weight: normal;
+}
+#miniCourse .miniCourse-inner-textBox-lead-price span {
+  font-size: 1rem;
+}
+#miniCourse .miniCourse-inner-textBox-lead-time {
+  margin-left: 50px;
+}
+#miniCourse .miniCourse-inner-textBox-lead-time span {
+  font-size: 1.5rem;
+}
+#miniCourse .miniCourse-inner-textBox-explain {
+  margin: 30px;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+#miniCourse .miniCourse-inner-textBox-btn {
+  margin: 20px auto;
+}
+
+/* --- 16タイプパーソナルカラーコース ---------------------------------------- */
+#typesCourse {
+  margin-top: 50px;
+}
+#typesCourse .typesCourse-inner {
+  display: flex;
+  justify-content: space-between;
+}
+#typesCourse .typesCourse-inner-imgBox {
+  width: 35%;
+  position: relative;
+}
+#typesCourse .typesCourse-inner-imgBox::after {
+  content: "16types personal color course";
+  position: absolute;
+  top: 0%;
+  left: 25%;
+  scale: 3;
+  font-family: "Allura";
+  letter-spacing: 0.03em;
+  color: #f47a7a;
+  font-weight: 500;
+  transform: rotate(-10deg);
+  font-size: 0.9rem;
+}
+#typesCourse .typesCourse-inner-imgBox img {
+  width: 90%;
+}
+#typesCourse .typesCourse-inner-textBox {
+  width: 60%;
+  background-color: #f5e1dc;
+  padding: 30px 60px;
+}
+#typesCourse .typesCourse-inner-textBox-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 10px 0;
+}
+#typesCourse .typesCourse-inner-textBox-menuList {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+#typesCourse .typesCourse-inner-textBox-menuList li {
+  background-color: #fff;
+  min-width: 100px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 50px;
+}
+#typesCourse .typesCourse-inner-textBox-menuList li:not(:first-child) {
+  margin-left: 30px;
+}
+#typesCourse .typesCourse-inner-textBox-lead {
+  display: flex;
+  margin: 30px;
+  align-items: flex-end;
+  letter-spacing: 0.2em;
+}
+#typesCourse .typesCourse-inner-textBox-lead-price {
+  font-size: 3rem;
+  font-weight: normal;
+}
+#typesCourse .typesCourse-inner-textBox-lead-price span {
+  font-size: 1.5rem;
+}
+#typesCourse .typesCourse-inner-textBox-lead-time {
+  font-size: 1.5rem;
+  margin-left: 100px;
+}
+#typesCourse .typesCourse-inner-textBox-lead-time span {
+  font-size: 2rem;
+}
+#typesCourse .typesCourse-inner-textBox-explain {
+  margin: 30px;
+  line-height: 1.5rem;
+}
+#typesCourse .typesCourse-inner-textBox-btn {
+  margin: 0px auto;
+}
+
+/* --- 顔タイプ診断コース ---------------------------------------- */
+#faceCourse {
+  margin-top: 50px;
+  padding: 50px 0;
+  background-color: #fff;
+}
+#faceCourse .faceCourse-inner {
+  display: flex;
+  justify-content: space-between;
+}
+#faceCourse .faceCourse-inner-imgBox {
+  width: 35%;
+  position: relative;
+}
+#faceCourse .faceCourse-inner-imgBox::after {
+  content: "Face type course";
+  position: absolute;
+  top: 0%;
+  left: 25%;
+  scale: 3;
+  font-family: "Allura";
+  letter-spacing: 0.03em;
+  color: #f47a7a;
+  font-weight: 500;
+  transform: rotate(-10deg);
+  font-size: 0.9rem;
+}
+#faceCourse .faceCourse-inner-imgBox img {
+  width: 90%;
+}
+#faceCourse .faceCourse-inner-textBox {
+  width: 60%;
+  background-color: #f5e1dc;
+  padding: 20px 30px;
+}
+#faceCourse .faceCourse-inner-textBox-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 10px 0;
+}
+#faceCourse .faceCourse-inner-textBox-menuList {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+#faceCourse .faceCourse-inner-textBox-menuList li {
+  background-color: #fff;
+  min-width: 100px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 50px;
+}
+#faceCourse .faceCourse-inner-textBox-menuList li:not(:first-child) {
+  margin-left: 30px;
+}
+#faceCourse .faceCourse-inner-textBox-lead {
+  display: flex;
+  margin: 20px;
+  align-items: flex-end;
+  letter-spacing: 0.2em;
+}
+#faceCourse .faceCourse-inner-textBox-lead-price {
+  font-size: 3rem;
+  font-weight: normal;
+}
+#faceCourse .faceCourse-inner-textBox-lead-price span {
+  font-size: 1.5rem;
+}
+#faceCourse .faceCourse-inner-textBox-lead-time {
+  font-size: 1.5rem;
+  margin-left: 100px;
+}
+#faceCourse .faceCourse-inner-textBox-lead-time span {
+  font-size: 2rem;
+}
+#faceCourse .faceCourse-inner-textBox-explain {
+  margin: 30px;
+  line-height: 1.5rem;
+}
+#faceCourse .faceCourse-inner-textBox-btn {
+  margin: 0px auto;
+}
+
+/* --- 自分型骨格診断コース ---------------------------------------- */
+#frameCourse {
+  margin-top: 50px;
+  padding: 40px 0;
+}
+#frameCourse .frameCourse-inner {
+  display: flex;
+  justify-content: space-between;
+}
+#frameCourse .frameCourse-inner-imgBox {
+  width: 35%;
+  position: relative;
+}
+#frameCourse .frameCourse-inner-imgBox::after {
+  content: "Personal frame type course";
+  position: absolute;
+  top: 0%;
+  left: 25%;
+  scale: 3;
+  font-family: "Allura";
+  letter-spacing: 0.03em;
+  color: #f47a7a;
+  font-weight: 500;
+  transform: rotate(-10deg);
+  font-size: 0.9rem;
+}
+#frameCourse .frameCourse-inner-imgBox img {
+  width: 90%;
+}
+#frameCourse .frameCourse-inner-textBox {
+  width: 60%;
+  background-color: #f5e1dc;
+  padding: 20px 60px;
+}
+#frameCourse .frameCourse-inner-textBox-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 10px 0;
+}
+#frameCourse .frameCourse-inner-textBox-menuList {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+#frameCourse .frameCourse-inner-textBox-menuList li {
+  background-color: #fff;
+  min-width: 100px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 50px;
+}
+#frameCourse .frameCourse-inner-textBox-menuList li:not(:first-child) {
+  margin-left: 30px;
+}
+#frameCourse .frameCourse-inner-textBox-lead {
+  display: flex;
+  margin: 30px;
+  align-items: flex-end;
+  letter-spacing: 0.2em;
+}
+#frameCourse .frameCourse-inner-textBox-lead-price {
+  font-size: 3rem;
+  font-weight: normal;
+}
+#frameCourse .frameCourse-inner-textBox-lead-price span {
+  font-size: 1.5rem;
+}
+#frameCourse .frameCourse-inner-textBox-lead-time {
+  font-size: 1.5rem;
+  margin-left: 100px;
+}
+#frameCourse .frameCourse-inner-textBox-lead-time span {
+  font-size: 2rem;
+}
+#frameCourse .frameCourse-inner-textBox-explain {
+  margin: 30px;
+  line-height: 1.5rem;
+}
+#frameCourse .frameCourse-inner-textBox-btn {
+  margin: 0px auto;
+}
+
+/* --- オンラインコース ---------------------------------------- */
+#onlineCourse {
+  margin-top: 50px;
+  padding: 50px 0;
+  background-color: #fff;
+}
+#onlineCourse .onlineCourse-inner-textBox {
+  width: 90%;
+  background-color: #f5e1dc;
+  padding: 30px 60px;
+}
+#onlineCourse .onlineCourse-inner-textBox-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 10px 0;
+}
+#onlineCourse .onlineCourse-inner-textBox-explain {
+  margin: 30px;
+  line-height: 1.5rem;
+  text-align: center;
+}
+#onlineCourse .onlineCourse-inner-textBox-btn {
+  margin: 0px auto;
+}
+
+/* --- 全体のBOX定義 ---------------------------------------- */
+.box-top-bg-img {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  overflow: hidden;
+  /* --- 背景の指定 ------------------------------------------- */
+}
+.box-top-bg-img .bgImgNoAnime {
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.box-top-bg-img .reservation-top {
+  background-image: url(../images/5_reservation/reservation1.jpg);
+}
+.box-top-bg-img .reservation-top-inner {
+  position: relative;
+  padding: 50vh 0;
+}
+.box-top-bg-img .reservation-top-inner-box-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+  letter-spacing: 0.24em;
+  line-height: 3rem;
+  font-family: "Damion";
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+.box-top-bg-img .reservation-top-inner-box-title span {
+  font-size: 3rem;
+}
+.box-top-bg-img .reservation-top-inner-lead {
+  position: absolute;
+  font-size: 1.5rem;
+  padding-left: 4rem;
+  text-indent: -4rem;
+  left: 20%;
+  line-height: 3rem;
+}
+.box-top-bg-img .reservation-top-inner-lead span {
+  font-size: 2rem;
+  margin: 0 0.5rem;
+}
+
+#reservation .reservation-inner {
+  text-align: center;
+}
+#reservation .reservation-inner-lead {
+  line-height: 2rem;
+}
+#reservation .reservation-inner-imgBox {
+  margin: 40px 0;
+}
+#reservation .reservation-inner-imgBox img {
+  width: 20%;
+}
+#reservation .reservation-inner-link {
+  margin: 40px 0;
+}
+#reservation .reservation-inner-explain {
+  line-height: 2rem;
+  margin: 40px 0 80px 0;
+}
+
 footer {
   /*リンクの形状*/
   /*リンクを右下に固定*/
-}
-footer #page-top a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #942D2F;
-  border-radius: 5px;
-  width: 60px;
-  height: 60px;
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 0.6rem;
-  transition: all 0.3s;
-}
-footer #page-top a a:hover {
-  background: #777;
-}
-footer #page-top {
-  position: fixed;
-  right: 10px;
-  bottom: 10px;
-  z-index: 2;
-  /*はじめは非表示*/
-  opacity: 0;
-  transform: translateX(100px);
-  /*　左の動き　*/
-  /*　右の動き　*/
-}
-footer #page-top.LeftMove {
-  animation: LeftAnime 0.5s forwards;
-}
-@keyframes LeftAnime {
-  from {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-footer #page-top.RightMove {
-  animation: RightAnime 0.5s forwards;
-}
-@keyframes RightAnime {
-  from {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(100px);
-  }
 }
 footer .footer-nav ul {
   height: 100px;
@@ -1612,7 +2458,7 @@ footer .footer-nav ul li .footer-menu {
     text-align: center;
   }
 }
-footer p {
+footer .footer-nav p {
   line-height: 1.5rem;
   background-color: #e6c4b3;
   text-align: center;
