@@ -626,7 +626,7 @@ a {
         }
 
 
-        @include pc {
+        @include ta {
           &:nth-child(2) {
             background-color: #f1d9ce;
             border: solid 5px #f1d9ce;/*線*/
@@ -635,7 +635,7 @@ a {
             border: solid 5px #f1d9ce;/*線*/
           }
           &:nth-child(4) {
-            border: solid 5px #e6c4b3;/*線*/
+            border: solid 5px #f1d9ce;/*線*/
             background-color: #f1d9ce;
           }
           &:nth-child(5) {
@@ -651,7 +651,7 @@ a {
           border: solid 5px #f1d9ce;/*線*/
           }
           &:nth-child(8) {
-            border: solid 5px #e6c4b3;/*線*/
+            border: solid 5px #f1d9ce;/*線*/
             background-color: #f1d9ce;
           }
         }

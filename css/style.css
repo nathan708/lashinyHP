@@ -526,7 +526,7 @@ a {
 #reservation .reservation-boxes .reservation-box:nth-child(8) {
   border: solid 5px #e6c4b3; /*線*/
 }
-@media (max-width: 1024px) {
+@media (max-width: 864px) {
   #reservation .reservation-boxes .reservation-box:nth-child(2) {
     background-color: #f1d9ce;
     border: solid 5px #f1d9ce; /*線*/
@@ -535,7 +535,7 @@ a {
     border: solid 5px #f1d9ce; /*線*/
   }
   #reservation .reservation-boxes .reservation-box:nth-child(4) {
-    border: solid 5px #e6c4b3; /*線*/
+    border: solid 5px #f1d9ce; /*線*/
     background-color: #f1d9ce;
   }
   #reservation .reservation-boxes .reservation-box:nth-child(5) {
@@ -551,7 +551,7 @@ a {
     border: solid 5px #f1d9ce; /*線*/
   }
   #reservation .reservation-boxes .reservation-box:nth-child(8) {
-    border: solid 5px #e6c4b3; /*線*/
+    border: solid 5px #f1d9ce; /*線*/
     background-color: #f1d9ce;
   }
 }
