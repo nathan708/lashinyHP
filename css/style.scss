@@ -736,551 +736,551 @@ a {
 
   }
 
-// 共通スライダー！！！！（トップ・プロフィール）
-/*==================================================
-スライダーのためのcss
-===================================*/
-.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
-  width:94%;
-  margin:20px auto;
-  
-  .slider-wrap {
-    position: relative;
-    max-width:40vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
-    // height:auto;
-    @include sp {
-      max-width: 60vw;
-    }
-  }
-
-  .slick-slide {
-    transform: scale(0.8);/*左右の画像のサイズを80%に*/
-    transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
-    opacity: 0.5;/*透過50%*/
+  // 共通スライダー！！！！（トップ・プロフィール）
+  /*==================================================
+  スライダーのためのcss
+  ===================================*/
+  .slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+    width:94%;
+    margin:20px auto;
     
-    &.slick-center{
-      transform: scale(1);/*中央の画像のサイズだけ等倍に*/
-      opacity: 1;/*透過なし*/
-    }
-  }
-}
-
-
-/*矢印の設定*/
-
-/*戻る、次へ矢印の位置*/
-.slick-prev, 
-.slick-next {
-  position: absolute;/*絶対配置にする*/
-  top: 42%;
-  cursor: pointer;/*マウスカーソルを指マークに*/
-  outline: none;/*クリックをしたら出てくる枠線を消す*/
-  border-top: 2px solid #666;/*矢印の色*/
-  border-right: 2px solid #666;/*矢印の色*/
-  height: 15px;
-  width: 15px;
-}
-
-.slick-prev {/*戻る矢印の位置と形状*/
-  left: -1.5%;
-  transform: rotate(-135deg);
-}
-
-.slick-next {/*次へ矢印の位置と形状*/
-  right: -1.5%;
-  transform: rotate(45deg);
-}
-
-/*ドットナビゲーションの設定*/
-
-.slick-dots {
-  text-align:center;
-  margin:20px 0 0 0;
-
-  li {
-    display:inline-block;
-    margin:0 5px;
-    display: none;
-  }
-  
-  button {
-    color: transparent;
-    outline: none;
-    width:8px;/*ドットボタンのサイズ*/
-    height:16px;/*ドットボタンのサイズ*/
-    display:block;
-    border-radius:50%;
-    background:#E5C4B2;/*ドットボタンの色*/
-  }
-  
-  .slick-active button{
-    background:#333;/*ドットボタンの現在地表示の色*/
-  }
-}
-
-/*==================================================
-スライダーのためのcss
-===================================*/
-
-
-#faq {
-
-  // .faq-box {
-  //   margin: 50px auto;
-  //   width: 80%;
-  //   max-width: 800px;
-  // }
-  
-
-  /*アコーディオン全体*/
-  .accordion-area{
-    list-style: none;
-    width: 96%;
-    max-width: 900px;
-    margin:0 auto;
-    
-    li{
-      margin: 10px 0;
-    }
-    
-    section {
-      border-radius: 30px;
-      background: rgba(230, 196, 179, 0.3);
-      padding: 1px;
-        
-      /*アコーディオンタイトル*/
-      .title {
-        position: relative;/*+マークの位置基準とするためrelative指定*/
-        cursor: pointer;
-        font-size:1rem;
-        font-weight: normal;
-        padding: 3% 3% 3% 50px;
-        transition: all .5s ease;
-        
-        
-        /*アイコンの＋と×*/
-        &::before,
-        &::after{
-          position: absolute;
-          content:'';
-          width: 15px;
-          height: 2px;
-          background-color: #333;
-          
-        }
-        &::before{
-          top:48%;
-          left: 15px;
-          transform: rotate(0deg);
-          
-        }
-        &::after{    
-          top:48%;
-          left: 15px;
-          transform: rotate(90deg);
-        
-        }
-        
-        /*　closeというクラスがついたら形状変化　*/
-        
-        &.close::before{
-        transform: rotate(45deg);
-        }
-        
-        &.close::after{
-        transform: rotate(-45deg);
-        }
+    .slider-wrap {
+      position: relative;
+      max-width:40vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+      // height:auto;
+      @include sp {
+        max-width: 60vw;
       }
-      /*アコーディオンで現れるエリア*/
-      .box {
-        display: none;/*はじめは非表示*/
-        background: #f3f3f3;
-        margin:0 3% 3% 3%;
-        padding: 3%;
+    }
+
+    .slick-slide {
+      transform: scale(0.8);/*左右の画像のサイズを80%に*/
+      transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+      opacity: 0.5;/*透過50%*/
+      
+      &.slick-center{
+        transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+        opacity: 1;/*透過なし*/
+      }
+    }
+  }
+
+
+  /*矢印の設定*/
+
+  /*戻る、次へ矢印の位置*/
+  .slick-prev, 
+  .slick-next {
+    position: absolute;/*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #666;/*矢印の色*/
+    border-right: 2px solid #666;/*矢印の色*/
+    height: 15px;
+    width: 15px;
+  }
+
+  .slick-prev {/*戻る矢印の位置と形状*/
+    left: -1.5%;
+    transform: rotate(-135deg);
+  }
+
+  .slick-next {/*次へ矢印の位置と形状*/
+    right: -1.5%;
+    transform: rotate(45deg);
+  }
+
+  /*ドットナビゲーションの設定*/
+
+  .slick-dots {
+    text-align:center;
+    margin:20px 0 0 0;
+
+    li {
+      display:inline-block;
+      margin:0 5px;
+      display: none;
+    }
+    
+    button {
+      color: transparent;
+      outline: none;
+      width:8px;/*ドットボタンのサイズ*/
+      height:16px;/*ドットボタンのサイズ*/
+      display:block;
+      border-radius:50%;
+      background:#E5C4B2;/*ドットボタンの色*/
+    }
+    
+    .slick-active button{
+      background:#333;/*ドットボタンの現在地表示の色*/
+    }
+  }
+
+  /*==================================================
+  スライダーのためのcss
+  ===================================*/
+
+
+  #faq {
+
+    // .faq-box {
+    //   margin: 50px auto;
+    //   width: 80%;
+    //   max-width: 800px;
+    // }
+    
+
+    /*アコーディオン全体*/
+    .accordion-area{
+      list-style: none;
+      width: 96%;
+      max-width: 900px;
+      margin:0 auto;
+      
+      li{
+        margin: 10px 0;
+      }
+      
+      section {
         border-radius: 30px;
-
-    p {
-      letter-spacing: 0.12em;
-      line-height: 1.5rem;
-    }
-
-      }
-    }
-  }
-}
-
-
-#access {
-  margin-top: 100px;
-  margin-bottom: 100px;
-  .access-box {
-    margin-top: 50px;
-    padding: 0 10%;
-
-
-    display: flex;
-    justify-content: space-between;
-
-    @include ta {
-      flex-direction: column-reverse;
-    }
-
-
-    &-map {
-      width: 49%;
-
-      @include ta {
-        width: 100%;
-      }
-
-      iframe {
-        width: 100%;
-      }
-
-    }
-    &-info {
-      width: 49%;
-      text-align: center;
-      display: table;
-
-      @include ta {
-        width: 100%;
-      }
-
+        background: rgba(230, 196, 179, 0.3);
+        padding: 1px;
+          
+        /*アコーディオンタイトル*/
+        .title {
+          position: relative;/*+マークの位置基準とするためrelative指定*/
+          cursor: pointer;
+          font-size:1rem;
+          font-weight: normal;
+          padding: 3% 3% 3% 50px;
+          transition: all .5s ease;
+          
+          
+          /*アイコンの＋と×*/
+          &::before,
+          &::after{
+            position: absolute;
+            content:'';
+            width: 15px;
+            height: 2px;
+            background-color: #333;
+            
+          }
+          &::before{
+            top:48%;
+            left: 15px;
+            transform: rotate(0deg);
+            
+          }
+          &::after{    
+            top:48%;
+            left: 15px;
+            transform: rotate(90deg);
+          
+          }
+          
+          /*　closeというクラスがついたら形状変化　*/
+          
+          &.close::before{
+          transform: rotate(45deg);
+          }
+          
+          &.close::after{
+          transform: rotate(-45deg);
+          }
+        }
+        /*アコーディオンで現れるエリア*/
+        .box {
+          display: none;/*はじめは非表示*/
+          background: #f3f3f3;
+          margin:0 3% 3% 3%;
+          padding: 3%;
+          border-radius: 30px;
 
       p {
-        padding: 20px 0;
         letter-spacing: 0.12em;
-        line-height: 3rem;
-        display: table-cell;
-        vertical-align: middle;
+        line-height: 1.5rem;
+      }
+
+        }
       }
     }
   }
-}
+
+
+  #access {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    .access-box {
+      margin-top: 50px;
+      padding: 0 10%;
+
+
+      display: flex;
+      justify-content: space-between;
+
+      @include ta {
+        flex-direction: column-reverse;
+      }
+
+
+      &-map {
+        width: 49%;
+
+        @include ta {
+          width: 100%;
+        }
+
+        iframe {
+          width: 100%;
+        }
+
+      }
+      &-info {
+        width: 49%;
+        text-align: center;
+        display: table;
+
+        @include ta {
+          width: 100%;
+        }
+
+
+        p {
+          padding: 20px 0;
+          letter-spacing: 0.12em;
+          line-height: 3rem;
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
 
 
 
 
 // プロフィールページ
 
-/* --- 全体のBOX定義 ---------------------------------------- */
-  .no-anime-bg-profile-img {
-    position   : relative;
-    width  : 100%;
-    height     : 100vh;
-    margin     : auto;
-    overflow   : hidden;
-    
-    @include ta {
-      height: 70vh;
-    }
-
-    @include sp {
-      height: 43vh;
-    }
-
-
-
-
-    /* --- 背景の指定 ------------------------------------------- */
-    .bgImgNoAnime {
-      background-size: cover;
-      position   : absolute;
-      top        : 0;
-      left       : 0;
-      bottom     : 0;
-      right      : 0;
-    }
-
-    .profile-top {
-      background-image: url(../images/profile/profile-top.jpg);
+  /* --- 全体のBOX定義 ---------------------------------------- */
+    .no-anime-bg-profile-img {
+      position   : relative;
+      width  : 100%;
+      height     : 100vh;
+      margin     : auto;
+      overflow   : hidden;
       
-      &-inner{
-        position: relative;
-        padding: 70vh 0;
+      @include ta {
+        height: 60vh;
+      }
+
+      @include sp {
+        height: 43vh;
+      }
+
+
+
+
+      /* --- 背景の指定 ------------------------------------------- */
+      .bgImgNoAnime {
+        background-size: cover;
+        position   : absolute;
+        top        : 0;
+        left       : 0;
+        bottom     : 0;
+        right      : 0;
+      }
+
+      .profile-top {
+        background-image: url(../images/profile/profile-top.jpg);
         
-        @include ta {
-          padding: 50vh 0;
-        }
-        @include sp {
-          padding: 30vh 0;
-        }
+        &-inner{
+          position: relative;
+          padding: 70vh 0;
+          
+          @include ta {
+            padding: 50vh 0;
+          }
+          @include sp {
+            padding: 30vh 0;
+          }
 
 
-        &-lead {
-          position: absolute;
-          font-size: 1.5rem;
-          padding-left: 4rem;
-          text-indent: -4rem;
-          left: 20%;
-          line-height: 3rem;
+          &-lead {
+            position: absolute;
+            font-size: 1.5rem;
+            padding-left: 4rem;
+            text-indent: -4rem;
+            left: 20%;
+            line-height: 3rem;
 
 
 
 
 
-          span {
-            font-size: 2rem;
-            margin: 0 0.5rem;
+            span {
+              font-size: 2rem;
+              margin: 0 0.5rem;
 
+            }
           }
         }
       }
     }
-  }
 
-// 自己紹介
+  // 自己紹介
 
-  #archivement-profile {
-    margin-top: 50px;
-
-    .archivement-profile-info {
+    #archivement-profile {
       margin-top: 50px;
-      
-        .slider-info {
-          height: 400px;
-          width: 650px;
-          padding: 10px 100px;
-          background-color:#F3E3DA;
 
-          @include ta {
-            max-height: 60vh;
-            height: 100%;
-          }
-
-          .slider-info-title {
-            text-align: center;
-            font-size: 1.3rem;
-            margin-top: 40px;
-
-            @include ta() {
-              width: 80vw;
-              margin: 0 auto ;
-              line-height: 2rem;
-              padding: 10px;
-            }
-
-          }
-
-          .slider-info-text {
-            margin-top: 30px;
-            line-height: 2.5;
-            margin-left: 30px;
+      .archivement-profile-info {
+        margin-top: 50px;
+        
+          .slider-info {
+            height: 400px;
+            width: 650px;
+            padding: 10px 100px;
+            background-color:#F3E3DA;
 
             @include ta {
-              width: 80vw;
-              margin: 10px auto ;
-              line-height: 2rem;
+              max-height: 60vh;
+              height: 100%;
+            }
+
+            .slider-info-title {
+              text-align: center;
+              font-size: 1.3rem;
+              margin-top: 40px;
+
+              @include ta() {
+                width: 80vw;
+                margin: 0 auto ;
+                line-height: 2rem;
+                padding: 10px;
+              }
 
             }
 
-        }
-      }
-    }
-  }
+            .slider-info-text {
+              margin-top: 30px;
+              line-height: 2.5;
+              margin-left: 30px;
 
-// 保有資格
+              @include ta {
+                width: 80vw;
+                margin: 10px auto ;
+                line-height: 2rem;
 
-  #certification {
-    margin-top: 100px;
-    margin-bottom: 100px;
+              }
 
-    .certification-box {
-      padding: 0 10%;
-      display: flex;
-      justify-content: space-between;
-
-      @include ta {
-        flex-direction: column-reverse;
-        margin: 0 auto;
-        padding: 0 5%;
-      }
-      
-      .certification-info {
-        width: 48%;
-        margin: 10% 0;
-
-
-        @include ta {
-          width: 100%;
-        }
-
-
-        .certification-info-text {
-          font-size: 1rem;
-          line-height: 2rem;
-          margin: 20px 0;
-
-          @include ta {
-            text-align: center;
-            margin: 0 auto;
           }
         }
       }
+    }
 
+  // 保有資格
 
-      .certification-img {
-        width: 48%;
-        margin: 10% 0;
+    #certification {
+      margin-top: 100px;
+      margin-bottom: 100px;
 
+      .certification-box {
+        padding: 0 10%;
+        display: flex;
+        justify-content: space-between;
 
         @include ta {
-          width: 100%;
-          margin-top: 30px;
+          flex-direction: column-reverse;
+          margin: 0 auto;
+          padding: 0 5%;
+        }
+        
+        .certification-info {
+          width: 48%;
+          margin: 10% 0;
 
+
+          @include ta {
+            width: 100%;
+          }
+
+
+          .certification-info-text {
+            font-size: 1rem;
+            line-height: 2rem;
+            margin: 20px 0;
+
+            @include ta {
+              text-align: center;
+              margin: 0 auto;
+            }
+          }
+        }
+
+
+        .certification-img {
+          width: 48%;
+          margin: 10% 0;
+
+
+          @include ta {
+            width: 100%;
+            margin-top: 30px;
+
+          }
+        }
+      }
+    } 
+
+  // 実績
+
+    #archivement {
+      .archivement-info {
+        
+        .archivement-table{
+          margin: 30px  auto 0;
+
+          
+          
+          td {
+            padding: 30px 0;
+
+            @include ta {
+              display: block;
+              text-align: center;
+              padding: 0px 40px;
+              line-height: 1.5rem;
+            }
+
+            & p span {
+              @include sp {
+                display: inline-block;
+              }
+            }
+
+          }
+          
+          .archivement-table-client {
+            p {
+              margin-right: 60px;
+              text-align: right;
+
+              @include ta {
+
+                margin: 0;
+                margin-top: 30px;
+                text-align: center;
+                // text-decoration: underline;
+                
+              }
+            
+            
+
+            }
+          }
+        }
+        .archivement-info-more {
+            margin-bottom: 100px;
+          p{
+            text-align: center;
+            margin: 30px 0;
+          }
         }
       }
     }
-  } 
 
-// 実績
+  // Instagram
+    #instagram{
 
-  #archivement {
-    .archivement-info {
-      
-      .archivement-table{
-        margin: 30px  auto 0;
-
+      .instagram-photos {
+        margin: 50px 0;
+        text-align: center;
         
-        
-        td {
-          padding: 30px 0;
+        img {
+          width: 20%;
+        }
+      }
+
+      .instagram-info {
+        text-align: center;
+
+        p{
+          line-height: 2.5rem;
+          @include ta {
+            line-height: 1.5rem;
+          }
+        }
+      }
+      .btn {
+        padding: 20px;
+      }
+    }
+
+  // お問いあわせ
+    #contact {
+      margin-bottom: 50px;
+
+      .contact-info {
+        margin: 50px 0;
+        text-align: center;
+        padding: 0 30px;
+
+        p{
+          line-height: 2.5rem;
 
           @include ta {
-            display: block;
-            text-align: center;
-            padding: 0px 40px;
             line-height: 1.5rem;
           }
 
-          & p span {
-            @include sp {
+          & span {
+            @include ta {
               display: inline-block;
             }
           }
-
         }
+      }
+      .contact-icons {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+
+        .contact-icons-link {
+          margin: 0 40px;
         
-        .archivement-table-client {
-          p {
-            margin-right: 60px;
-            text-align: right;
+          img {
+            margin: 0 30px;
+            width: 100px;
 
             @include ta {
-
               margin: 0;
-              margin-top: 30px;
-              text-align: center;
-              // text-decoration: underline;
-              
             }
+
+          }
           
-           
-
-          }
-        }
-      }
-      .archivement-info-more {
-          margin-bottom: 100px;
-        p{
-          text-align: center;
-          margin: 30px 0;
         }
       }
     }
+
+
+
+
+  // 題字-english title
+
+  .menu-title {
+    font-size: 1.8rem;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+    letter-spacing: 0.24em;
+    line-height: 3rem;
+    font-family: "Allura";
+
   }
-
-// Instagram
-  #instagram{
-
-    .instagram-photos {
-      margin: 50px 0;
-      text-align: center;
-      
-      img {
-        width: 20%;
-      }
-    }
-
-    .instagram-info {
-      text-align: center;
-
-      p{
-        line-height: 2.5rem;
-        @include ta {
-          line-height: 1.5rem;
-        }
-      }
-    }
-    .btn {
-      padding: 20px;
-    }
-  }
-
-// お問いあわせ
-  #contact {
-    margin-bottom: 50px;
-
-    .contact-info {
-      margin: 50px 0;
-      text-align: center;
-      padding: 0 30px;
-
-      p{
-        line-height: 2.5rem;
-
-        @include ta {
-          line-height: 1.5rem;
-        }
-
-        & span {
-          @include ta {
-            display: inline-block;
-          }
-        }
-      }
-    }
-    .contact-icons {
-      display: flex;
-      text-align: center;
-      justify-content: center;
-
-      .contact-icons-link {
-        margin: 0 40px;
-      
-        img {
-          margin: 0 30px;
-          width: 100px;
-
-          @include ta {
-            margin: 0;
-          }
-
-        }
-        
-      }
-    }
-  }
-
-
-
-
-// 題字-english title
-
-.menu-title {
-  font-size: 1.8rem;
-  position: absolute;
-  top: 48%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  text-align: center;
-  letter-spacing: 0.24em;
-  line-height: 3rem;
-  font-family: "Allura";
-
-}
 
 
 
@@ -1841,6 +1841,10 @@ a {
           display: inline-block;
           transform: scale(0.8);
 
+          @include ta {
+            bottom: -40%;
+          }
+
           @include sp {
             content: none;
           }
@@ -1852,6 +1856,10 @@ a {
           left: 40%;
           display: inline-block;
           transform: scale(0.8);
+
+          @include ta {
+            bottom: -32%;
+          }
 
           @include sp {
             content: none;
@@ -1865,6 +1873,10 @@ a {
           display: inline-block;
           transform: scale(0.8);
 
+          @include ta {
+            bottom: -32%;
+          }
+
           @include sp {
             content: none;
           }
@@ -1877,6 +1889,10 @@ a {
           display: inline-block;
           transform: scale(0.8);
 
+          @include ta {
+            bottom: -40%;
+          }
+
           @include sp {
             content: none;
           }
@@ -1888,6 +1904,10 @@ a {
           left: 10%;
           display: inline-block;
           transform: scale(0.8);
+
+          @include ta {
+            bottom: -36%;
+          }
 
           @include sp {
             display: none;
@@ -2312,6 +2332,10 @@ a {
         display: inline-block;
         transform: scale(0.8);
 
+        @include ta {
+          bottom: -40%;
+        }
+
         @include sp {
           content: none;
         }
@@ -2335,6 +2359,10 @@ a {
         left: 40%;
         display: inline-block;
         transform: scale(0.8);
+
+        @include ta {
+          bottom: -32%;
+        }
         
         @include sp {
           content: none;
@@ -2359,6 +2387,10 @@ a {
         left: 10%;
         display: inline-block;
         transform: scale(0.8);
+
+        @include ta {
+          bottom: -40%;
+        }
 
         @include sp {
           content: none;
@@ -2875,6 +2907,10 @@ a {
         display: inline-block;
         transform: scale(0.8);
 
+        @include ta {
+          bottom: -40%;
+        }
+
         @include sp {
           content: none;
         }
@@ -2886,6 +2922,14 @@ a {
         left: 40%;
         display: inline-block;
         transform: scale(0.8);
+
+        @include pc {
+          bottom: -27%;
+        }
+
+        @include ta {
+          bottom: -30%;
+        }
 
         @include sp {
           content: none;
@@ -2899,6 +2943,14 @@ a {
         display: inline-block;
         transform: scale(0.8);
 
+        @include pc {
+          bottom: -28%;
+        }
+
+        @include ta {
+          bottom: -33%;
+        }
+
         @include sp {
           content: none;
         }
@@ -2910,6 +2962,14 @@ a {
         left: 0%;
         display: inline-block;
         transform: scale(0.8);
+
+        @include pc {
+          bottom: -34%;
+        }
+
+        @include ta {
+          bottom: -37%;
+        }
 
         @include sp {
           content: none;
