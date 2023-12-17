@@ -8,20 +8,17 @@
   <link rel="stylesheet" href="css/destyle.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
   <link rel="stylesheet" href="css/style.css">
-
+  
   <!-- WEBフォント -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Allura&family=Damion&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
-
-
+  
+  
 </head>
 <body>
   
-  <div class="box-top-bg-img">
-    <div class="bgImg src1"></div>
-    <div class="bgImg src2"></div>
-    <!-- <div class="bgImg src3"></div> -->
+ 
     
     <header id="header">
       <div class="header-inner wrapper">
@@ -36,21 +33,25 @@
               <li><a href="#reservation">Reservation</a></li>
               <li><a href="#voice">Voice</a></li>
               <li><a href="#faq">FAQ</a></li>
-              <li><a href="index.html?#access">Access</a></li>
+              <li><a href="#access">Access</a></li>
             </ul>
           </div>
         </nav><!-- /#main-nav -->
       </div><!-- /.header-inner wrapper -->
     </header><!-- /#header -->
-  </div>
-
+  
+    <div class="video_wrapper">
+      <video playsinline loop autoplay muted src="video/laShinyMovie.mp4">
+  
+      </video>
+    </div>
 
 
 
 <!-- コンセプト -->
   
   <section id="concept" class="wrapper">
-    <div class="sec-title">
+    <div class="sec-title fadeUpTrigger">
           <h2>Concept</h2>
           <p>コンセプト</p>
     </div> 
@@ -77,7 +78,7 @@
 
   <!-- プロフィール -->
   <section id="profile" class="wrapper">
-    <div class="sec-title">
+    <div class="sec-title fadeUpTrigger">
       <h2>Profile</h2>
       <p>自己紹介</p>
     </div> 
@@ -102,7 +103,7 @@
 
   <!-- メニュー -->
   <section id="menu" class="wrapper">
-    <div class="sec-title">
+    <div class="sec-title fadeUpTrigger">
       <h2>Menu</h2>
       <p>メニュー</p>
     </div><!-- /.sec-title -->
@@ -144,7 +145,7 @@
       </div><!-- /.menu-box -->
       <div class="menu-box">
         <img src="images/index/online.jpg" alt="オンライン診断">
-        <a href="#">
+        <a href="menu.html#onlineCourse">
           <div class="menu-box-background">
           </div >
           <p class="menu-text">
@@ -167,7 +168,7 @@
 
 <!-- 予約方法 -->
   <section id="reservation" class="wrapper">
-    <div class="sec-title">
+    <div class="sec-title fadeUpTrigger">
       <h2>Reservation</h2>
       <p>予約方法</p>
     </div><!-- /.sec-title -->
@@ -218,13 +219,13 @@
 
     </div><!-- /.reservation-boxes -->
 
-    <a href="#" class="btn">LINE登録はこちら</a><!-- /.btn -->
+    <a href="https://lin.ee/VeWtxPM" class="btn">LINE登録はこちら</a><!-- /.btn -->
   </section><!-- /#reservation.wrapper -->
 
 
   <!-- お客様の声 -->
   <section id="voice" class="wrapper">
-    <div class="sec-title">
+    <div class="sec-title fadeUpTrigger">
       <h2>Voice</h2>
       <p>お客様の声</p>
     </div><!-- /.sec-title -->
@@ -240,22 +241,30 @@
       <li class="slider-wrap">
         <img src="images/index/voice枠.png" alt="voice枠">
         <div class="voice-box">
-          <p class="voice-info">WEB診断だとブルベ夏だったのですが、イエベ秋だと聞いてびっくりしました。ブルベの淡い色が似合わないと思っていたので、納得できました。プロに診断してもらうって大事だと思いました。</p>
+          <p class="voice-info">子どもも一緒にサロンに行ったので少し心配していましたが、優しい笑顔で対応してくださりホッとしました。洋服選びのアドアイスもいただき、大満足できました。</p>
           <p class="voice-person">20代  女性</p>
+        </div>
+      </li>
+      <li class="slider-wrap">
+        <img src="images/index/voice枠.png" alt="voice枠">
+        <div class="voice-box">
+          <p class="voice-info">WEBの自己診断ではどっちだろうと悩む設問が多かったので、正確に診断してもらい買い物に行くことが楽しくなりました。自信を持って服を選べそうです！</p>
+          <p class="voice-person">30代  女性</p>
         </div><!-- /.voice-box -->
       </li>
       <li class="slider-wrap">
         <img src="images/index/voice枠.png" alt="voice枠">
         <div class="voice-box">
-          <p class="voice-info">WEB診断だとブルベ夏だったのですが、イエベ秋だと聞いてびっくりしました。ブルベの淡い色が似合わないと思っていたので、納得できました。プロに診断してもらうって大事だと思いました。</p>
-          <p class="voice-person">20代  女性</p>
+          <p class="voice-info">今までクローゼットの中は、ベージュ、ブラウン・アイボリー・ネイビーみたいな色味ばかりでした。あやさんに相談してから、明るいカラーが仲間入りして、服を選ぶことがワクワクできるようになりました。</p>
+          <p class="voice-person">30代  女性</p>
         </div><!-- /.voice-box -->
       </li>
       <li class="slider-wrap">
         <img src="images/index/voice枠.png" alt="voice枠">
         <div class="voice-box">
-          <p class="voice-info">WEB診断だとブルベ夏だったのですが、イエベ秋だと聞いてびっくりしました。ブルベの淡い色が似合わないと思っていたので、納得できました。プロに診断してもらうって大事だと思いました。</p>
-          <p class="voice-person">20代  女性</p>
+          <p class="voice-info">
+            診断を受けたおかげで、結婚式のドレスや小物がすぐに決まり、担当の方も驚いていました。前撮りも、事前にあやさんの診断結果をもとにヘアメイクさんに希望を伝えられ、当日も満足いく撮影ができました。</p>
+          <p class="voice-person">30代  女性</p>
         </div><!-- /.voice-box -->
       </li>
     
@@ -263,12 +272,12 @@
 
 
 
-    <a href="#" class="btn">インスタグラム</a><!-- /.btn -->
+    <a href="https://www.instagram.com/aya__iro.dori?utm_medium=copy_link" class="btn">インスタグラム</a><!-- /.btn -->
   </section><!-- /#voice -->
 
 <!-- FAQ -->
   <section id="faq" class="wrapper">
-    <div class="sec-title">
+    <div class="sec-title fadeUpTrigger">
       <h2>FAQ</h2>
       <p>よくある質問</p>
     </div><!-- /.sec-title -->    
@@ -276,42 +285,78 @@
     <ul class="accordion-area">
       <li >
         <section>
-          <h3 class="title">当日のメイクはどうしたらいいですか？</h3>
+          <h3 class="title">診断日はメイクをして行ってもいいですか？</h3>
           <div class="box">
             <p>
-              内容が入ります。<br>
-              内容が入ります。<br>
-              内容が入ります。
-
+              パーソナルカラー診断は素顔での診断になります。当日はメイクなしでお越し下さい。カラーコンタクトレンズ、メガネなども外して頂きます。
             </p>
           </div><!-- /.box -->
         </section>
       </li  >
       <li >
         <section>
-          <h3 class="title">服装はどうしたらいいですか？</h3>
+          <h3 class="title">当日の服装はどうすればいいですか？</h3>
           <div class="box">
-            <p>内容が入ります。</p>
+            <p>タートルネックや衿が立ってるシャツなど、首元にお洋服があると診断に支障が出ますので、なるべくノーカラーでお越しください。自分型骨格診断をご希望の方は、より細部の診断ができるように、レギンスとヒートテックシャツのような薄手のものをお持ちいただき、サロンにて着替えていただきます。</p>
           </div><!-- /.box -->
         </section>
       </li  >
       <li >
         <section>
-          <h3 class="title">子どもを連れて行ってもいいですか？</h3>
+          <h3 class="title">子どもが一緒でも診断はしてもらえますか？</h3>
           <div class="box">
-            <p>内容が入ります。</p>
+            <p>もちろんです！むしろ大歓迎です！私も２人の男の子の子育てをしています。ママでも諦めずにファッションを心から楽しめるお手伝いをさせていただきます。サロンは完全予約制のプライベート空間なので、お子様がぐずってもご安心ください。お客様とお子様のペースに合わせて診断させていただきます。</p>
+          </div><!-- /.box -->
+        </section>
+      </li  >
+      <li >
+        <section>
+          <h3 class="title">予約はどのようにすればいいですか？</h3>
+          <div class="box">
+            <p>公式LINEもしくはInstagramにて、毎月15日の前に次月の予約可能日をお知らせいたします。毎月15日が予約開始日となり、時間になりましたら公式LINEに必要事項を送信していただきます。予約は先着順となっておりますので、予め公式LINEのご登録をお願いいたします。</p>
+          </div><!-- /.box -->
+        </section>
+      </li  >
+      <li >
+        <section>
+          <h3 class="title">駐車場はありますか？</h3>
+          <div class="box">
+            <p>予約が決まり次第、事前にお知らせいただければ駐車場のご準備させていただきます。</p>
+          </div><!-- /.box -->
+        </section>
+      </li  >
+      <li >
+        <section>
+          <h3 class="title">お支払いはどうすればいいですか？</h3>
+          <div class="box">
+            <p>お支払いは銀行振り込みでお願いいたします。入金手数料はお客様負担となりますので、予めご了承ください。</p>
+          </div><!-- /.box -->
+        </section>
+      </li  >
+      <li >
+        <section>
+          <h3 class="title">診断日当日に体調不良になった場合はどうすればいいですか？</h3>
+          <div class="box">
+            <p>キャンセル料はいただかず、改めて日程をご調整いたします。代金の払い戻しはございませんので、予めご了承ください。</p>
+          </div><!-- /.box -->
+        </section>
+      </li  >
+      <li >
+        <section>
+          <h3 class="title">友達と診断に行きたいのですが可能ですか？</h3>
+          <div class="box">
+            <p>ペア診断も行なっておりますので、ぜひご家族、ご友人様とお誘い合わせの上ご予約をお待ちしております。親しい方の新たな一面を発見でき、とても盛り上がります！</p>
           </div><!-- /.box -->
         </section>
       </li  >
     </ul>
     
-    <a href="#" class="btn">more</a><!-- /.btn -->
   </section><!-- /#faq -->
 
 
 <!-- アクセス -->
   <section id="access" class="wrapper">
-    <div class="sec-title">
+    <div class="sec-title fadeUpTrigger">
       <h2>Access</h2>
       <p>サロンの場所</p>
     </div><!-- /.sec-title -->
@@ -336,17 +381,17 @@
       
       <ul>
         <li>
-          <a href="#">
+          <a href="https://lin.ee/VeWtxPM">
             <p class="footer-menu">LINE</p><!-- /.footer-nav -->
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="https://www.instagram.com/aya__iro.dori?utm_medium=copy_link">
             <p class="footer-menu">Instagram</p><!-- /.footer-nav -->
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="cancel_policy.html">
             <p class="footer-menu">キャンセルポリシー</p><!-- /.footer-nav -->
           </a>
         </li>
