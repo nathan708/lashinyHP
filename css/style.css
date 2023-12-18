@@ -2276,7 +2276,7 @@ a {
 }
 @media (max-width: 564px) {
   #self-frame-type-explain .self-frame-type-explain-inner-textBox-title::before {
-    content: "16types Personal Color";
+    content: "Personal Frame Type";
     scale: 2;
     top: 0%;
   }
@@ -3831,7 +3831,7 @@ a {
   text-align: center;
   letter-spacing: 0.24em;
   line-height: 10rem;
-  font-family: "Damion";
+  font-family: "Zen Maru Gothic", sans-serif;
   font-size: 2rem;
   font-weight: normal;
   margin: 5% auto;
