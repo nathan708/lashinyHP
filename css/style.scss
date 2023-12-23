@@ -8,6 +8,7 @@ $sp: 564px; // スマホ
 $htmlbackcolor: #fdefe9; //基本的なバックカラー
 $coursebackcolor: #f5e1dc; //コースのバックカラー
 $baseFontColor: #442508; //ベースのフォントカラー
+$accentPink: #f47a7a;
 
 // 画面サイズが1024px以下になったら適応
 @mixin pc {
@@ -1629,12 +1630,12 @@ a {
               content: "16types \A Personal Color";
               white-space: pre;
               position: absolute;
-              top: -10%;
+              top: -30%;
               right: 20%;
               scale: (3);
               font-family: "Allura";
               letter-spacing: 0.03em;
-              color: #f47a7a;
+              color: $accentPink;
               font-weight: 500;
               transform: rotate(10deg);
               font-size: 1.2rem;
@@ -1744,6 +1745,8 @@ a {
             margin: 30px 0;
             font-size: 1.8rem;
             font-family: "Academy Engraved LET";
+            color: $accentPink;
+            
 
             @include sp {
               margin: 15px 0;
@@ -1840,7 +1843,8 @@ a {
             @include sp {
               position: static;
               width: 80%;
-              margin-top: 20px;
+              margin: 20px auto 0 auto;
+
             }
           }
 
@@ -2265,6 +2269,7 @@ a {
           margin: 30px 0;
           font-size: 1.8rem;
           font-family: "Academy Engraved LET";
+          color: $accentPink;
           
           @include sp {
             margin: 15px 0;
@@ -2827,6 +2832,7 @@ a {
           margin: 30px 0;
           font-size: 1.8rem;
           font-family: "Academy Engraved LET";
+          color: $accentPink;
 
           @include sp {
             margin: 15px 0;
