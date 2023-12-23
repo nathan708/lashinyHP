@@ -1,4 +1,5 @@
 // 動きのきっかけとなるアニメーションの名前を定義
+// 下からふわっと
 function fadeAnime(){
 
 	//ふわっと動くきっかけのクラス名と動きのクラス名の設定
@@ -15,20 +16,6 @@ function fadeAnime(){
 	　　}
 	　　});
 	
-	//関数でまとめることでこの後に違う動きを追加することが出来ます
-	$('.fadeDownTrigger').each(function(){ //fadeInDownTriggerというクラス名が
-	　　var elemPos = $(this).offset().top-50; //要素より、50px上の
-	　　var scroll = $(window).scrollTop();
-	　　var windowHeight = $(window).height();
-	　　if (scroll >= elemPos - windowHeight){
-	　　$(this).addClass('fadeDown');
-	　　// 画面内に入ったらfadeDownというクラス名を追記
-	　　}else{
-	　　　$(this).removeClass('fadeDown');
-	　　// 画面外に出たらfadeDownというクラス名を外す
-	　　}
-	　　});
-	
 	
 	}//ここまでふわっと動くきっかけのクラス名と動きのクラス名の設定
 	
@@ -38,10 +25,132 @@ function fadeAnime(){
 		});// ここまで画面をスクロールをしたら動かしたい場合の記述
 
 
+// ふわっとセンターVer.
+function fadeAnimeCenter(){
+
+	//ふわっと動くきっかけのクラス名と動きのクラス名の設定
+	$('.fadeUpCenterTrigger').each(function(){ //fadeInUpTriggerというクラス名が
+	　　var elemPos = $(this).offset().top-50; //要素より、50px上の
+	　　var scroll = $(window).scrollTop();
+	　　var windowHeight = $(window).height();
+	　　if (scroll >= elemPos - windowHeight){
+	　　$(this).addClass('fadeUpCenter');
+	　　// 画面内に入ったらfadeInというクラス名を追記
+	　　}else{
+	　　　$(this).removeClass('fadeUpCenter');
+	　　// 画面外に出たらfadeInというクラス名を外す
+	　　}
+	　　});
+	
+	
+	}//ここまでふわっと動くきっかけのクラス名と動きのクラス名の設定
+	
+	// 画面をスクロールをしたら動かしたい場合の記述
+		$(window).scroll(function (){
+			fadeAnimeCenter();/* アニメーション用の関数を呼ぶ*/
+		});// ここまで画面をスクロールをしたら動かしたい場合の記述
+
+
+
+// ふわっと左からVer.
+function fadeAnimeLeft(){
+
+	//ふわっと動くきっかけのクラス名と動きのクラス名の設定
+	$('.fadeLeftTrigger').each(function(){ //fadeInUpTriggerというクラス名が
+	　　var elemPos = $(this).offset().top-50; //要素より、50px上の
+	　　var scroll = $(window).scrollTop();
+	　　var windowHeight = $(window).height();
+	　　if (scroll >= elemPos - windowHeight){
+	　　$(this).addClass('fadeLeft');
+	　　// 画面内に入ったらfadeInというクラス名を追記
+	　　}else{
+	　　　$(this).removeClass('fadeLeft');
+	　　// 画面外に出たらfadeInというクラス名を外す
+	　　}
+	　　});
+	
+	
+	}//ここまでふわっと動くきっかけのクラス名と動きのクラス名の設定
+	
+	// 画面をスクロールをしたら動かしたい場合の記述
+		$(window).scroll(function (){
+			fadeAnimeLeft();/* アニメーション用の関数を呼ぶ*/
+		});// ここまで画面をスクロールをしたら動かしたい場合の記述
+
+
+
+
+
+// ふわっと右からVer.
+function fadeAnimeRight(){
+
+	//ふわっと動くきっかけのクラス名と動きのクラス名の設定
+	$('.fadeRightTrigger').each(function(){ //fadeInUpTriggerというクラス名が
+	　　var elemPos = $(this).offset().top-50; //要素より、50px上の
+	　　var scroll = $(window).scrollTop();
+	　　var windowHeight = $(window).height();
+	　　if (scroll >= elemPos - windowHeight){
+	　　$(this).addClass('fadeRight');
+	　　// 画面内に入ったらfadeInというクラス名を追記
+	　　}else{
+	　　　$(this).removeClass('fadeRight');
+	　　// 画面外に出たらfadeInというクラス名を外す
+	　　}
+	　　});
+	
+	
+	}//ここまでふわっと動くきっかけのクラス名と動きのクラス名の設定
+	
+	// 画面をスクロールをしたら動かしたい場合の記述
+		$(window).scroll(function (){
+			fadeAnimeRight();/* アニメーション用の関数を呼ぶ*/
+		});// ここまで画面をスクロールをしたら動かしたい場合の記述
+
+
+
+
+
+
+
+
+
 
 
 		
+// Y軸回転Ver.
+function fadeAnimeRotateY(){
 
+	//ふわっと動くきっかけのクラス名と動きのクラス名の設定
+	$('.rotateYTrigger').each(function(){ //fadeInUpTriggerというクラス名が
+	　　var elemPos = $(this).offset().top-50; //要素より、50px上の
+	　　var scroll = $(window).scrollTop();
+	　　var windowHeight = $(window).height();
+	　　if (scroll >= elemPos - windowHeight){
+	　　$(this).addClass('rotateY');
+	　　// 画面内に入ったらfadeInというクラス名を追記
+	　　}else{
+	　　　$(this).removeClass('rotateY');
+	　　// 画面外に出たらfadeInというクラス名を外す
+	　　}
+	　　});
+	
+	
+	}//ここまでふわっと動くきっかけのクラス名と動きのクラス名の設定
+	
+	// 画面をスクロールをしたら動かしたい場合の記述
+		$(window).scroll(function (){
+			fadeAnimeRotateY();/* アニメーション用の関数を呼ぶ*/
+		});// ここまで画面をスクロールをしたら動かしたい場合の記述
+
+
+
+
+
+
+
+
+		
+//ナビゲーションメニュー固定
 //スクロールすると上部に固定させるための設定を関数でまとめる
 function FixedAnime() {
 	var headerH = $('#header').outerHeight(true);
@@ -186,3 +295,7 @@ $('.slider').slick({
 	variableWidth: true,//幅の違う画像の高さを揃えて表示
 	dots: false,//下部ドットナビゲーションの表示
 });
+
+
+
+

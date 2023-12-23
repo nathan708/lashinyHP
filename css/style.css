@@ -98,6 +98,86 @@ a {
   opacity: 0;
 }
 
+.fadeUpCenter {
+  animation-name: fadeUpAnimeCenter;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnimeCenter {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 100px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+.fadeUpCenterTrigger {
+  opacity: 0;
+}
+
+/* 左から */
+.fadeLeft {
+  animation-name: fadeLeftAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeLeftAnime {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.fedeLeftTrigger {
+  opacity: 0;
+}
+
+/* 右から */
+.fadeRight {
+  animation-name: fadeRightAnime;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeRightAnime {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.fadeRightTrigger {
+  opacity: 0;
+}
+
+/* 　Y 軸（横へ） */
+.rotateY {
+  animation-name: rotateYAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotateYAnime {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
 #header {
   position: absolute;
   height: 130px;
@@ -1086,6 +1166,7 @@ a {
 
 .p-color-top {
   background-image: url(../images/personal_color/personalColorTop.jpg);
+  background-position: 60% 100%;
 }
 .p-color-top-inner {
   position: relative;
@@ -1326,18 +1407,6 @@ a {
     box-shadow: 20px 25px #EFCBC3;
   }
 }
-#types-color-explain .types-color-explain-inner-imgBox-2 {
-  width: 300px;
-  position: absolute;
-  right: 100px;
-  bottom: -40%;
-  z-index: -1;
-}
-@media (max-width: 564px) {
-  #types-color-explain .types-color-explain-inner-imgBox-2 {
-    display: none;
-  }
-}
 #types-color-explain .types-color-explain-inner::after {
   content: " ";
   width: 80%;
@@ -1461,18 +1530,36 @@ a {
     margin: 30px auto 45px auto;
   }
 }
-#p-color-flow .flow-box .flow-box-img-step1 img {
+#p-color-flow .flow-box .flow-box-img-step1-1 {
   position: absolute;
   width: 50%;
   top: 20%;
-  right: -15%;
-  z-index: 1;
+  right: -25%;
+  z-index: 2;
 }
 @media (max-width: 564px) {
-  #p-color-flow .flow-box .flow-box-img-step1 img {
+  #p-color-flow .flow-box .flow-box-img-step1-1 {
     position: static;
     width: 80%;
     margin-top: 20px;
+  }
+}
+#p-color-flow .flow-box .flow-box-img-step1-2 {
+  width: 35%;
+  position: absolute;
+  right: -25%;
+  bottom: -140%;
+  z-index: 1;
+}
+@media (max-width: 864px) {
+  #p-color-flow .flow-box .flow-box-img-step1-2 {
+    width: 40%;
+    right: -25%;
+  }
+}
+@media (max-width: 564px) {
+  #p-color-flow .flow-box .flow-box-img-step1-2 {
+    display: none;
   }
 }
 #p-color-flow .flow-box .flow-box-img-step3 img {
