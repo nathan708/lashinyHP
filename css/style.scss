@@ -771,6 +771,13 @@ a {
           transform: translateX(-50%);
           -webkit-transform: translateX(-50%);
           -ms-transform: translateX(-50%);
+          width: 70%;
+          text-align: center;
+
+          & span {
+            display: inline-block;
+          }
+          
         }
 
         &-text {
@@ -797,7 +804,7 @@ a {
 
       .voice-info {
         position: absolute;
-        top: 20%;
+        top: 30%;
         left: 10%;
         width: 80%;
         line-height: 1.5rem;
@@ -812,7 +819,7 @@ a {
 
       .voice-person {
         position: absolute;
-        top: 70%;
+        top: 60%;
         left: 10%;
         width: 70%;
         line-height: 1.5rem;
@@ -1166,6 +1173,10 @@ a {
                 margin: 10px auto ;
                 line-height: 2rem;
 
+              }
+
+              & span {
+                display: inline-block;
               }
 
           }

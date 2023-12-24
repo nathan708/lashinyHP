@@ -654,6 +654,11 @@ a {
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
+  width: 70%;
+  text-align: center;
+}
+#reservation .reservation-boxes .reservation-box-title span {
+  display: inline-block;
 }
 #reservation .reservation-boxes .reservation-box-text {
   position: absolute;
@@ -667,7 +672,7 @@ a {
 }
 #voice .voice-box .voice-info {
   position: absolute;
-  top: 20%;
+  top: 30%;
   left: 10%;
   width: 80%;
   line-height: 1.5rem;
@@ -682,7 +687,7 @@ a {
 }
 #voice .voice-box .voice-person {
   position: absolute;
-  top: 70%;
+  top: 60%;
   left: 10%;
   width: 70%;
   line-height: 1.5rem;
@@ -980,6 +985,9 @@ a {
     margin: 10px auto;
     line-height: 2rem;
   }
+}
+#archivement-profile .archivement-profile-info .slider-info .slider-info-text span {
+  display: inline-block;
 }
 
 #certification {
