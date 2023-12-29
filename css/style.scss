@@ -834,6 +834,20 @@ a {
       }
     }
 
+    .voice-info-instagram {
+
+      margin: 50px 0;
+      text-align: center;
+      padding: 0 30px;
+      line-height: 2.5rem;
+
+      & span {
+        display: inline-block;
+      }
+      @include ta {
+          line-height: 1.5rem;
+      }
+    }
   }
 
   // 共通スライダー！！！！（トップ・プロフィール）
@@ -1641,7 +1655,7 @@ a {
               content: "16types \A Personal Color";
               white-space: pre;
               position: absolute;
-              top: -30%;
+              top: -60%;
               right: 20%;
               scale: (3);
               font-family: "Allura";
@@ -2202,6 +2216,10 @@ a {
             line-height: 2.5rem;
             font-size: 1.25rem;
 
+            @include ta {
+              margin-top: 0;
+            }
+
             @include sp {
               margin-top: 20px;
             }
@@ -2367,7 +2385,7 @@ a {
           position: absolute;
           width: 50%;
           top: 10%;
-          right: -15%;
+          right: -18%;
           z-index: 1;
           
           @include sp {
@@ -2997,8 +3015,10 @@ a {
           }
           
           span {
-            display: inline-block;          
+            display: inline-block;
+            text-indent: 0;          
           }
+
         } 
         img {
           position: absolute;

@@ -701,6 +701,20 @@ a {
     line-height: 1rem;
   }
 }
+#voice .voice-info-instagram {
+  margin: 50px 0;
+  text-align: center;
+  padding: 0 30px;
+  line-height: 2.5rem;
+}
+#voice .voice-info-instagram span {
+  display: inline-block;
+}
+@media (max-width: 864px) {
+  #voice .voice-info-instagram {
+    line-height: 1.5rem;
+  }
+}
 
 /*==================================================
 スライダーのためのcss
@@ -1365,7 +1379,7 @@ a {
   content: "16types \aPersonal Color";
   white-space: pre;
   position: absolute;
-  top: -30%;
+  top: -60%;
   right: 20%;
   scale: 3;
   font-family: "Allura";
@@ -1864,6 +1878,11 @@ a {
   line-height: 2.5rem;
   font-size: 1.25rem;
 }
+@media (max-width: 864px) {
+  #f-type-explain .f-type-explain-inner-textBox-text {
+    margin-top: 0;
+  }
+}
 @media (max-width: 564px) {
   #f-type-explain .f-type-explain-inner-textBox-text {
     margin-top: 20px;
@@ -2011,7 +2030,7 @@ a {
   position: absolute;
   width: 50%;
   top: 10%;
-  right: -15%;
+  right: -18%;
   z-index: 1;
 }
 @media (max-width: 564px) {
@@ -2596,6 +2615,7 @@ a {
 }
 #frame-type-flow .flow-box .flow-box-img-step5 p span {
   display: inline-block;
+  text-indent: 0;
 }
 #frame-type-flow .flow-box .flow-box-img-step5 img {
   position: absolute;
