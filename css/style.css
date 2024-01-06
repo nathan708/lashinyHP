@@ -680,9 +680,13 @@ a {
 }
 @media (max-width: 864px) {
   #voice .voice-box .voice-info {
-    top: 20%;
     font-size: 0.9rem;
     line-height: 1rem;
+  }
+}
+@media (max-width: 564px) {
+  #voice .voice-box .voice-info {
+    top: 20%;
   }
 }
 #voice .voice-box .voice-person {
@@ -2015,7 +2019,6 @@ a {
   #face-type-flow .flow-box-inner-step6 p {
     padding: 10px 0;
     margin: 0;
-    text-indent: 0;
   }
 }
 #face-type-flow .flow-box:nth-child(4), #face-type-flow .flow-box:nth-child(5) {
@@ -2030,7 +2033,7 @@ a {
   position: absolute;
   width: 50%;
   top: 10%;
-  right: -18%;
+  right: -22%;
   z-index: 1;
 }
 @media (max-width: 564px) {
@@ -2084,7 +2087,7 @@ a {
   width: 30%;
   top: 58%;
   z-index: 1;
-  right: 3%;
+  right: -6%;
 }
 @media (max-width: 564px) {
   #face-type-flow .flow-box .flow-box-img-step5-2 img {
@@ -2254,7 +2257,7 @@ a {
   }
 }
 #frame-type-explain .frame-type-explain-inner-textBox {
-  width: 45%;
+  width: 48%;
   padding-left: 60px;
 }
 @media (max-width: 564px) {
@@ -2499,7 +2502,7 @@ a {
   }
 }
 #frame-type-flow .flow-box-inner-text {
-  padding: 0px 50px;
+  padding: 0px 45px;
   line-height: 2rem;
   font-size: 1.25rem;
 }
@@ -2862,7 +2865,7 @@ a {
   display: flex;
   justify-content: center;
   list-style: none;
-  margin: 10px 0;
+  margin: 10px;
 }
 @media (max-width: 864px) {
   #totalCourse .totalCourse-inner-textBox-menuList {
@@ -2873,14 +2876,15 @@ a {
   background-color: #fff;
   min-width: 40px;
   text-align: center;
-  padding: 20px 30px;
+  padding: 20px 20px;
   border-radius: 50px;
 }
 @media (max-width: 864px) {
   #totalCourse .totalCourse-inner-textBox-menuList li {
     padding: 10px;
     max-width: 80%;
-    margin: 5px auto;
+    margin: 5px 0;
+    margin-left: 10px;
   }
 }
 #totalCourse .totalCourse-inner-textBox-menuList li:not(:first-child) {
@@ -2888,10 +2892,10 @@ a {
 }
 @media (max-width: 864px) {
   #totalCourse .totalCourse-inner-textBox-menuList li:not(:first-child) {
-    margin: 5px auto;
     padding: 10px;
     max-width: 80%;
-    margin: 5px auto;
+    margin: 5px 0;
+    margin-left: 10px;
   }
 }
 #totalCourse .totalCourse-inner-textBox-lead {
@@ -3054,7 +3058,8 @@ a {
   #cinderellaCourse .cinderellaCourse-inner-textBox-menuList1 li {
     padding: 10px;
     max-width: 80%;
-    margin: 5px auto;
+    margin: 5px 0;
+    margin-left: 10px;
   }
 }
 #cinderellaCourse .cinderellaCourse-inner-textBox-menuList1 li:not(:first-child) {
@@ -3065,7 +3070,8 @@ a {
     margin: 5px auto;
     padding: 10px;
     max-width: 80%;
-    margin: 5px auto;
+    margin: 5px 0;
+    margin-left: 10px;
   }
 }
 #cinderellaCourse .cinderellaCourse-inner-textBox-menuList2 {
@@ -3091,7 +3097,8 @@ a {
   #cinderellaCourse .cinderellaCourse-inner-textBox-menuList2 li {
     padding: 10px;
     max-width: 80%;
-    margin: 5px auto;
+    margin: 5px 0;
+    margin-left: 10px;
   }
 }
 #cinderellaCourse .cinderellaCourse-inner-textBox-menuList2 li:not(:first-child) {
@@ -3102,7 +3109,8 @@ a {
     margin: 5px auto;
     padding: 10px;
     max-width: 80%;
-    margin: 5px auto;
+    margin: 5px 0;
+    margin-left: 10px;
   }
 }
 #cinderellaCourse .cinderellaCourse-inner-textBox-lead {
@@ -3156,7 +3164,7 @@ a {
   }
 }
 #cinderellaCourse .cinderellaCourse-inner-textBox-explain {
-  margin: 30px 60px;
+  margin: 30px 50px;
   line-height: 1.5rem;
 }
 #cinderellaCourse .cinderellaCourse-inner-textBox-btn {
@@ -3166,7 +3174,7 @@ a {
 /* --- ミニコース ---------------------------------------- */
 #miniCourse {
   background-color: #fff;
-  padding: 50px;
+  padding: 50px 20px;
 }
 @media (max-width: 864px) {
   #miniCourse {
@@ -3219,7 +3227,7 @@ a {
   background-color: #fff;
   min-width: 100px;
   text-align: center;
-  padding: 20px;
+  padding: 20px 10px;
   border-radius: 50px;
   font-size: 0.8rem;
 }
@@ -3227,7 +3235,8 @@ a {
   #miniCourse .miniCourse-inner-textBox-menuList li {
     padding: 10px;
     max-width: 80%;
-    margin: 5px auto;
+    margin: 5px 0;
+    margin-left: 10px;
     min-width: 50px;
   }
 }
@@ -3236,10 +3245,10 @@ a {
 }
 @media (max-width: 864px) {
   #miniCourse .miniCourse-inner-textBox-menuList li:not(:first-child) {
-    margin: 5px auto;
     padding: 10px;
     max-width: 80%;
-    margin: 5px auto;
+    margin: 5px 0;
+    margin-left: 10px;
   }
 }
 #miniCourse .miniCourse-inner-textBox-lead {
@@ -3285,7 +3294,7 @@ a {
   font-size: 1.5rem;
 }
 #miniCourse .miniCourse-inner-textBox-explain {
-  margin: 30px;
+  margin: 30px 25px;
   font-size: 0.9rem;
   line-height: 1.5rem;
 }
@@ -3321,6 +3330,7 @@ a {
     transform: rotate(-10deg);
     font-size: 1.2rem;
     left: 15%;
+    padding-bottom: 40px;
   }
 }
 #typesCourse .typesCourse-inner-imgBox {
@@ -3391,7 +3401,8 @@ a {
 @media (max-width: 864px) {
   #typesCourse .typesCourse-inner-textBox-menuList li {
     max-width: 80%;
-    margin: 5px auto;
+    margin: 5px 0;
+    margin-left: 10px;
     padding: 10px;
   }
 }
@@ -3400,10 +3411,10 @@ a {
 }
 @media (max-width: 864px) {
   #typesCourse .typesCourse-inner-textBox-menuList li:not(:first-child) {
-    margin: 5px auto;
     padding: 10px;
     max-width: 80%;
-    margin: 5px auto;
+    margin: 5px 0;
+    margin-left: 10px;
   }
 }
 #typesCourse .typesCourse-inner-textBox-lead {
@@ -3438,7 +3449,7 @@ a {
 }
 #typesCourse .typesCourse-inner-textBox-lead-time {
   font-size: 1.5rem;
-  margin-left: 100px;
+  margin-left: 30px;
 }
 @media (max-width: 864px) {
   #typesCourse .typesCourse-inner-textBox-lead-time {
@@ -3491,6 +3502,7 @@ a {
     transform: rotate(-10deg);
     font-size: 1.2rem;
     left: 20%;
+    padding-bottom: 20px;
   }
 }
 #faceCourse .faceCourse-inner-imgBox {
@@ -3555,7 +3567,8 @@ a {
   #faceCourse .faceCourse-inner-textBox-menuList li {
     padding: 10px;
     max-width: 80%;
-    margin: 5px auto;
+    margin: 5px 0;
+    margin-left: 10px;
   }
 }
 #faceCourse .faceCourse-inner-textBox-menuList li:not(:first-child) {
@@ -3563,10 +3576,10 @@ a {
 }
 @media (max-width: 864px) {
   #faceCourse .faceCourse-inner-textBox-menuList li:not(:first-child) {
-    margin: 5px auto;
     padding: 10px;
     max-width: 80%;
-    margin: 5px auto;
+    margin: 5px 0;
+    margin-left: 10px;
   }
 }
 #faceCourse .faceCourse-inner-textBox-lead {
@@ -3601,7 +3614,7 @@ a {
 }
 #faceCourse .faceCourse-inner-textBox-lead-time {
   font-size: 1.5rem;
-  margin-left: 100px;
+  margin-left: 60px;
 }
 @media (max-width: 864px) {
   #faceCourse .faceCourse-inner-textBox-lead-time {
@@ -3656,6 +3669,7 @@ a {
     transform: rotate(-10deg);
     font-size: 1.2rem;
     left: 20%;
+    padding-bottom: 20px;
   }
 }
 #frameCourse .frameCourse-inner-imgBox {
@@ -3725,7 +3739,8 @@ a {
   #frameCourse .frameCourse-inner-textBox-menuList li {
     padding: 10px;
     max-width: 80%;
-    margin: 5px auto;
+    margin: 5px 0;
+    margin-left: 10px;
   }
 }
 #frameCourse .frameCourse-inner-textBox-menuList li:not(:first-child) {
@@ -3733,10 +3748,10 @@ a {
 }
 @media (max-width: 864px) {
   #frameCourse .frameCourse-inner-textBox-menuList li:not(:first-child) {
-    margin: 5px auto;
     padding: 10px;
     max-width: 80%;
-    margin: 5px auto;
+    margin: 5px 0;
+    margin-left: 10px;
   }
 }
 #frameCourse .frameCourse-inner-textBox-lead {
@@ -3771,7 +3786,7 @@ a {
 }
 #frameCourse .frameCourse-inner-textBox-lead-time {
   font-size: 1.5rem;
-  margin-left: 100px;
+  margin-left: 60px;
 }
 @media (max-width: 864px) {
   #frameCourse .frameCourse-inner-textBox-lead-time {

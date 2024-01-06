@@ -811,9 +811,12 @@ a {
         letter-spacing: 0.12em;
 
         @include ta {
-          top: 20%;
           font-size: 0.9rem;
           line-height: 1rem;
+        }
+
+        @include sp {
+          top: 20%;
         }
       }
 
@@ -1837,11 +1840,9 @@ a {
                 padding: 10px 0;
                 margin: 0;
               }
+              
             }
-
-
           }
-
         }
         
         &:nth-child(4),
@@ -2363,7 +2364,7 @@ a {
             @include sp {
               padding: 10px 0;
               margin: 0;
-              text-indent: 0;
+
             }
           }
         }
@@ -2385,7 +2386,7 @@ a {
           position: absolute;
           width: 50%;
           top: 10%;
-          right: -18%;
+          right: -22%;
           z-index: 1;
           
           @include sp {
@@ -2448,7 +2449,7 @@ a {
           width: 30%;
           top: 58%;
           z-index: 1;
-          right: 3%;
+          right: -6%;
 
           @include sp {
             display: none;
@@ -2630,7 +2631,7 @@ a {
       }
     
       &-textBox {
-        width: 45%;
+        width: 48%;
         padding-left: 60px;
 
         @include sp {
@@ -2882,7 +2883,7 @@ a {
         }
         
         &-text {
-          padding: 0px 50px;
+          padding: 0px 45px;
           line-height: 2rem;
           font-size: 1.25rem;
 
@@ -3281,7 +3282,7 @@ a {
             display: flex;
             justify-content: center;
             list-style: none;
-            margin: 10px 0;
+            margin: 10px ;
 
             @include ta {
               flex-wrap: wrap;
@@ -3293,13 +3294,14 @@ a {
               background-color: #fff;
               min-width: 40px;
               text-align: center;
-              padding: 20px 30px;
+              padding: 20px 20px;
               border-radius: 50px;
 
               @include ta {
                 padding: 10px;
                 max-width: 80%;
-                margin: 5px auto;
+                margin: 5px 0;
+                margin-left: 10px;
               }
 
       
@@ -3308,10 +3310,10 @@ a {
                 margin-left: 10px;
 
                 @include ta {
-                  margin: 5px auto;
                   padding: 10px;
                   max-width: 80%;
-                  margin: 5px auto;
+                  margin: 5px 0;
+                  margin-left: 10px;
                 }
               }
             }
@@ -3486,7 +3488,8 @@ a {
               @include ta {
                 padding: 10px;
                 max-width: 80%;
-                margin: 5px auto;
+                margin: 5px 0;
+                margin-left: 10px;
 
               }
 
@@ -3498,7 +3501,8 @@ a {
                   margin: 5px auto;
                   padding: 10px;
                   max-width: 80%;
-                  margin: 5px auto;
+                  margin: 5px 0;
+                  margin-left: 10px;
                 }
               }
             }
@@ -3525,7 +3529,8 @@ a {
               @include ta {
                 padding: 10px;
                 max-width: 80%;
-                margin: 5px auto;
+                margin: 5px 0;
+                margin-left: 10px;
 
               }
 
@@ -3537,7 +3542,8 @@ a {
                   margin: 5px auto;
                   padding: 10px;
                   max-width: 80%;
-                  margin: 5px auto;
+                  margin: 5px 0;
+                  margin-left: 10px;
                 }
               }
             }
@@ -3596,7 +3602,7 @@ a {
 
           }
           &-explain {
-            margin: 30px 60px;
+            margin: 30px 50px;
             line-height: 1.5rem;
 
           }
@@ -3613,7 +3619,7 @@ a {
     #miniCourse {
 
       background-color: #fff;
-      padding: 50px;
+      padding: 50px 20px;
 
       @include ta {
         background-color: $htmlbackcolor;
@@ -3664,14 +3670,15 @@ a {
               background-color: #fff;
               min-width: 100px;
               text-align: center;
-              padding: 20px;
+              padding: 20px 10px;
               border-radius: 50px;
               font-size: 0.8rem;
 
               @include ta {
                 padding: 10px;
                 max-width: 80%;
-                margin: 5px auto;
+                margin: 5px 0;
+                  margin-left: 10px;
                 min-width: 50px;
               }
 
@@ -3679,10 +3686,11 @@ a {
                 margin-left: 15px;
 
                 @include ta {
-                  margin: 5px auto;
+                
                   padding: 10px;
                   max-width: 80%;
-                  margin: 5px auto;
+                  margin: 5px 0;
+                  margin-left: 10px;
                 }
               }
             }
@@ -3735,9 +3743,11 @@ a {
 
           }
           &-explain {
-            margin: 30px;
+            margin: 30px 25px;
             font-size: 0.9rem;
             line-height: 1.5rem;
+
+            
           }
 
           &-btn {
@@ -3773,6 +3783,7 @@ a {
             transform: rotate(-10deg);
             font-size: 1.2rem;
             left: 15%;
+            padding-bottom: 40px;
           }
         }
 
@@ -3797,6 +3808,7 @@ a {
             font-weight: 500;
             transform: rotate(-10deg);
             font-size: 0.9rem;
+
           }
 
           & img {
@@ -3846,7 +3858,8 @@ a {
 
               @include ta {
                 max-width: 80%;
-                margin: 5px auto;
+                margin: 5px 0;
+                  margin-left: 10px;
                 padding: 10px;
               }
 
@@ -3854,10 +3867,11 @@ a {
                 margin-left: 30px;
 
                 @include ta {
-                  margin: 5px auto;
+
                   padding: 10px;
                   max-width: 80%;
-                  margin: 5px auto;
+                  margin: 5px 0;
+                  margin-left: 10px;
                 }
               }
             }
@@ -3894,7 +3908,7 @@ a {
 
             &-time {
               font-size: 1.5rem;
-              margin-left: 100px;
+              margin-left: 30px;
 
               @include ta {
                 margin:  0 auto;
@@ -3952,6 +3966,8 @@ a {
             transform: rotate(-10deg);
             font-size: 1.2rem;
             left: 20%;
+            padding-bottom: 20px;
+            
           }
         }
 
@@ -4020,17 +4036,19 @@ a {
               @include ta {
                 padding: 10px;
                 max-width: 80%;
-                margin: 5px auto;
+                margin: 5px 0;
+                  margin-left: 10px;
               }
 
               &:not(:first-child) {
                 margin-left: 30px;
 
                 @include ta {
-                  margin: 5px auto;
+
                   padding: 10px;
                   max-width: 80%;
-                  margin: 5px auto;
+                  margin: 5px 0;
+                  margin-left: 10px;
                 }
               }
             }
@@ -4066,7 +4084,7 @@ a {
 
             &-time {
               font-size: 1.5rem;
-              margin-left: 100px;
+              margin-left: 60px;
 
 
               @include ta {
@@ -4126,6 +4144,8 @@ a {
             transform: rotate(-10deg);
             font-size: 1.2rem;
             left: 20%;
+            padding-bottom: 20px;
+
           }
         }
 
@@ -4199,17 +4219,18 @@ a {
               @include ta {
                 padding: 10px;
                 max-width: 80%;
-                margin: 5px auto;
+                margin: 5px 0;
+                  margin-left: 10px;
               }
 
               &:not(:first-child) {
                 margin-left: 30px;
 
                 @include ta {
-                  margin: 5px auto;
                   padding: 10px;
                   max-width: 80%;
-                  margin: 5px auto;
+                  margin: 5px 0;
+                  margin-left: 10px;
                 }
               }
             }
@@ -4247,7 +4268,7 @@ a {
 
             &-time {
               font-size: 1.5rem;
-              margin-left: 100px;
+              margin-left: 60px;
 
               @include ta {
                 margin:  0 auto;
