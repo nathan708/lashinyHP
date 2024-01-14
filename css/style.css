@@ -1077,6 +1077,7 @@ a {
 #archivement .archivement-info .archivement-table .archivement-table-client p {
   margin-right: 60px;
   text-align: right;
+  font-weight: bold;
 }
 @media (max-width: 864px) {
   #archivement .archivement-info .archivement-table .archivement-table-client p {
@@ -2611,21 +2612,15 @@ a {
     padding: 0;
   }
 }
-@media (max-width: 564px) {
-  #frame-type-flow .flow-box .flow-box-img-step5 p {
-    text-indent: 0;
-  }
-}
 #frame-type-flow .flow-box .flow-box-img-step5 p span {
   display: inline-block;
-  text-indent: 0;
 }
 #frame-type-flow .flow-box .flow-box-img-step5 img {
   position: absolute;
   width: 40%;
   top: -26%;
   z-index: 1;
-  right: -25%;
+  right: -28%;
 }
 @media (max-width: 564px) {
   #frame-type-flow .flow-box .flow-box-img-step5 img {
@@ -3212,6 +3207,9 @@ a {
   font-size: 1.5rem;
   margin: 20px 0;
 }
+#miniCourse .miniCourse-inner-textBox-title span {
+  display: inline-block;
+}
 #miniCourse .miniCourse-inner-textBox-menuList {
   display: flex;
   justify-content: center;
@@ -3374,7 +3372,7 @@ a {
 #typesCourse .typesCourse-inner-textBox-title {
   text-align: center;
   font-size: 2rem;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 @media (max-width: 864px) {
   #typesCourse .typesCourse-inner-textBox-title {
@@ -3934,14 +3932,14 @@ a {
 .box-top-cancelPolicy-bg-img {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 60vh;
   margin: auto;
   overflow: hidden;
   /* --- 背景の指定 ------------------------------------------- */
 }
 @media (max-width: 864px) {
   .box-top-cancelPolicy-bg-img {
-    height: 45vh;
+    height: 30vh;
   }
 }
 .box-top-cancelPolicy-bg-img .bgImgNoAnime {

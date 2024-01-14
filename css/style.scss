@@ -1287,6 +1287,7 @@ a {
             p {
               margin-right: 60px;
               text-align: right;
+              font-weight: bold;
 
               @include ta {
 
@@ -3011,13 +3012,10 @@ a {
       }
       .flow-box-img-step5 {
         p{
-          @include sp {
-            text-indent: 0;
-          }
+          
           
           span {
             display: inline-block;
-            text-indent: 0;          
           }
 
         } 
@@ -3026,7 +3024,7 @@ a {
           width: 40%;
           top: -26%;
           z-index: 1;
-          right: -25%;
+          right: -28%;
 
           @include sp {
             position: static;
@@ -3653,6 +3651,11 @@ a {
             text-align: center;
             font-size: 1.5rem;
             margin: 20px 0;
+
+            span {
+              display: inline-block;
+            }
+
           }
           &-menuList {
 
@@ -3831,7 +3834,7 @@ a {
           &-title {
             text-align: center;
             font-size: 2rem;
-            margin: 10px 0;
+            margin: 20px 0;
 
             @include ta {
 
@@ -4455,12 +4458,12 @@ a {
   .box-top-cancelPolicy-bg-img {
     position   : relative;
     width  : 100%;
-    height     : 100vh;
+    height     : 60vh;
     margin     : auto;
     overflow   : hidden;
 
     @include ta {
-      height: 45vh;
+      height: 30vh;
     }
 
   
