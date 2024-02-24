@@ -2946,6 +2946,16 @@ a {
   margin: 30px;
   line-height: 1.5rem;
 }
+@media (max-width: 864px) {
+  #totalCourse .totalCourse-inner-textBox-explain {
+    padding: 0 100px;
+  }
+}
+@media (max-width: 564px) {
+  #totalCourse .totalCourse-inner-textBox-explain {
+    padding: 0;
+  }
+}
 #totalCourse .totalCourse-inner-textBox-btn {
   margin: 20px auto;
 }
@@ -3162,6 +3172,16 @@ a {
   margin: 30px 50px;
   line-height: 1.5rem;
 }
+@media (max-width: 864px) {
+  #cinderellaCourse .cinderellaCourse-inner-textBox-explain {
+    padding: 0 100px;
+  }
+}
+@media (max-width: 564px) {
+  #cinderellaCourse .cinderellaCourse-inner-textBox-explain {
+    padding: 0;
+  }
+}
 #cinderellaCourse .cinderellaCourse-inner-textBox-btn {
   margin: 20px auto;
 }
@@ -3296,6 +3316,17 @@ a {
   font-size: 0.9rem;
   line-height: 1.5rem;
 }
+@media (max-width: 864px) {
+  #miniCourse .miniCourse-inner-textBox-explain {
+    padding: 0 125px;
+    text-align: center;
+  }
+}
+@media (max-width: 564px) {
+  #miniCourse .miniCourse-inner-textBox-explain {
+    padding: 0;
+  }
+}
 #miniCourse .miniCourse-inner-textBox-btn {
   margin: 20px auto;
 }
@@ -3372,7 +3403,7 @@ a {
 #typesCourse .typesCourse-inner-textBox-title {
   text-align: center;
   font-size: 2rem;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 @media (max-width: 864px) {
   #typesCourse .typesCourse-inner-textBox-title {
@@ -3467,6 +3498,16 @@ a {
 #typesCourse .typesCourse-inner-textBox-explain {
   margin: 30px;
   line-height: 1.5rem;
+}
+@media (max-width: 864px) {
+  #typesCourse .typesCourse-inner-textBox-explain {
+    padding: 0 100px;
+  }
+}
+@media (max-width: 564px) {
+  #typesCourse .typesCourse-inner-textBox-explain {
+    padding: 0;
+  }
 }
 #typesCourse .typesCourse-inner-textBox-btn {
   margin: 10px auto;
@@ -3632,6 +3673,16 @@ a {
 #faceCourse .faceCourse-inner-textBox-explain {
   margin: 30px;
   line-height: 1.5rem;
+}
+@media (max-width: 864px) {
+  #faceCourse .faceCourse-inner-textBox-explain {
+    padding: 0 100px;
+  }
+}
+@media (max-width: 564px) {
+  #faceCourse .faceCourse-inner-textBox-explain {
+    padding: 0;
+  }
 }
 #faceCourse .faceCourse-inner-textBox-btn {
   margin: 20px auto;
@@ -3805,6 +3856,16 @@ a {
   margin: 30px;
   line-height: 1.5rem;
 }
+@media (max-width: 864px) {
+  #frameCourse .frameCourse-inner-textBox-explain {
+    padding: 0 100px;
+  }
+}
+@media (max-width: 564px) {
+  #frameCourse .frameCourse-inner-textBox-explain {
+    padding: 0;
+  }
+}
 #frameCourse .frameCourse-inner-textBox-btn {
   margin: 20px auto;
 }
@@ -3932,14 +3993,14 @@ a {
 .box-top-cancelPolicy-bg-img {
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: 100vh;
   margin: auto;
   overflow: hidden;
   /* --- 背景の指定 ------------------------------------------- */
 }
 @media (max-width: 864px) {
   .box-top-cancelPolicy-bg-img {
-    height: 30vh;
+    height: 45vh;
   }
 }
 .box-top-cancelPolicy-bg-img .bgImgNoAnime {

@@ -3370,6 +3370,13 @@ a {
           &-explain {
             margin: 30px;
             line-height: 1.5rem;
+
+            @include ta {
+              padding:0 100px;
+            }
+            @include sp {
+              padding: 0;
+            }
           }
 
           &-btn {
@@ -3603,6 +3610,13 @@ a {
             margin: 30px 50px;
             line-height: 1.5rem;
 
+            @include ta {
+              padding:0 100px;
+            }
+            @include sp {
+              padding: 0;
+            }
+
           }
 
           &-btn {
@@ -3750,7 +3764,14 @@ a {
             font-size: 0.9rem;
             line-height: 1.5rem;
 
-            
+            @include ta {
+              padding:0 125px;
+              text-align: center;
+            }
+            @include sp {
+              padding: 0;
+              // text-align: left;
+            }
           }
 
           &-btn {
@@ -3834,7 +3855,7 @@ a {
           &-title {
             text-align: center;
             font-size: 2rem;
-            margin: 20px 0;
+            margin: 10px 0;
 
             @include ta {
 
@@ -3933,6 +3954,15 @@ a {
           &-explain {
             margin: 30px;
             line-height: 1.5rem;
+
+
+            @include ta {
+              padding:0 100px;
+            }
+            @include sp {
+              padding: 0;
+            }
+            
           }
 
           &-btn {
@@ -4109,6 +4139,14 @@ a {
           &-explain {
             margin: 30px;
             line-height: 1.5rem;
+
+
+            @include ta {
+              padding:0 100px;
+            }
+            @include sp {
+              padding: 0;
+            }
           }
 
           &-btn {
@@ -4292,6 +4330,13 @@ a {
           &-explain {
             margin: 30px;
             line-height: 1.5rem;
+
+            @include ta {
+              padding:0 100px;
+            }
+            @include sp {
+              padding: 0;
+            }
           }
 
           &-btn {
@@ -4458,12 +4503,12 @@ a {
   .box-top-cancelPolicy-bg-img {
     position   : relative;
     width  : 100%;
-    height     : 60vh;
+    height     : 100vh;
     margin     : auto;
     overflow   : hidden;
 
     @include ta {
-      height: 30vh;
+      height: 45vh;
     }
 
   
