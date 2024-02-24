@@ -1230,12 +1230,13 @@ a {
 
           .certification-info-text {
             font-size: 1rem;
-            line-height: 2rem;
+            line-height: 1.2rem;
             margin: 20px 0;
-
+            
             @include ta {
               text-align: center;
               margin: 0 auto;
+              line-height: 2rem;
             }
           }
         }
